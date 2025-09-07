@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import psycopg2
 import csv
 
 # Fungsi untuk memuat data dari file CSV dengan caching
