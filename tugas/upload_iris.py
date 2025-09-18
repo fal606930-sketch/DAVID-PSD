@@ -7,21 +7,17 @@ db_user = 'postgres'
 db_password = '123456789'
 db_host = 'localhost'
 db_port = '5432'
-db_name = 'iris_data'
+db_name = 'data_saya'
 
 # Nama file CSV dan nama tabel yang diinginkan
-csv_file_path = 'iris-full.csv'
-table_name = 'iris_data'
+csv_file_path = 'IMDB_processed_data.csv'
+table_name = 'data_saya'
 
 # --- Proses Upload ---
 try:
     # 1. Baca file CSV ke dalam DataFrame pandas
     df = pd.read_csv(csv_file_path)
     print("File CSV berhasil dibaca.")
-
-    # 2. HAPUS KOLOM "Class"
-    df = df.drop(columns=['Class'])
-    print("Kolom 'Class' berhasil dihapus dari DataFrame.")
 
     # 3. Buat koneksi engine ke PostgreSQL
     # Format: postgresql://user:password@host:port/database_name
