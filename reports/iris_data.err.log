@@ -31,6 +31,12 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-!pip install pycaret
+from pycaret.anomaly import *
+
+# Inisialisasi environment PyCaret untuk deteksi anomali
+# Ganti 'silent=True' dengan 'verbose=False'
+print("Menyiapkan environment PyCaret untuk deteksi anomali...")
+anomaly_setup = setup(data=df, session_id=123, verbose=False)
+print("Setup selesai.")
 -------------------
 

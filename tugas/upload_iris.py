@@ -1,34 +1,42 @@
 import pandas as pd
 from sqlalchemy import create_engine
+import sys
 
-# --- Konfigurasi Koneksi Database ---
-# Ganti dengan detail koneksi PostgreSQL Anda
-db_user = 'postgres'
-db_password = '123456789'
-db_host = 'localhost'
-db_port = '5432'
-db_name = 'data_saya'
+# --- 1. KONFIGURASI DATABASE (Silakan diisi sesuai pengaturan Anda) ---
+db_user = 'postgres'  # Biasanya 'postgres'
+db_password = '123456789' # Ganti dengan password yang Anda atur saat instalasi
+db_host = 'localhost' # Biasanya 'localhost'
+db_port = '5432'      # Port default PostgreSQL
+db_name = 'iris_data' # Nama database yang sudah Anda buat di pgAdmin
 
-# Nama file CSV dan nama tabel yang diinginkan
-csv_file_path = 'IMDB_processed_data.csv'
-table_name = 'data_saya'
+# --- 2. KONFIGURASI FILE DAN NAMA TABEL ---
+nama_file_csv = 'iris-full.csv'
+nama_tabel_di_db = 'iris_data' # Nama tabel yang akan dibuat di PostgreSQL
 
-# --- Proses Upload ---
+# --- Proses Upload (Tidak perlu diubah) ---
+print("Skrip dimulai...")
+
 try:
-    # 1. Baca file CSV ke dalam DataFrame pandas
-    df = pd.read_csv(csv_file_path)
-    print("File CSV berhasil dibaca.")
-
-    # 3. Buat koneksi engine ke PostgreSQL
-    # Format: postgresql://user:password@host:port/database_name
+    # Membuat koneksi ke database
+    print(f"Mencoba terhubung ke database '{db_name}'...")
     engine = create_engine(f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}')
-    print("Engine database berhasil dibuat.")
-
-    # 4. Unggah DataFrame ke tabel PostgreSQL
-    # 'if_exists='replace'' akan membuat ulang tabel jika sudah ada.
-    df.to_sql(table_name, engine, if_exists='replace', index=False)
     
-    print(f"Data berhasil diunggah ke tabel '{table_name}' di database '{db_name}'.")
-
+    # Membaca file CSV
+    print(f"Membaca file '{nama_file_csv}'...")
+    df = pd.read_csv(nama_file_csv)
+    
+    # Mengunggah data ke PostgreSQL
+    print(f"Mengunggah data ke tabel '{nama_tabel_di_db}'...")
+    # if_exists='replace' akan menghapus tabel lama jika sudah ada dan membuat yang baru
+    # Ganti menjadi 'append' jika hanya ingin menambah data, atau 'fail' jika tidak ingin menimpa
+    df.to_sql(nama_tabel_di_db, engine, if_exists='replace', index=False)
+    
+    print("\n🚀 SUKSES! Data berhasil diunggah ke PostgreSQL.")
+    
+except FileNotFoundError:
+    print(f"❌ GAGAL: File '{nama_file_csv}' tidak ditemukan. Pastikan file ada di folder yang sama.")
 except Exception as e:
-    print(f"Terjadi kesalahan: {e}")
+    print(f"❌ GAGAL: Terjadi kesalahan saat menghubungkan atau mengunggah data.")
+    print(f"Detail Error: {e}")
+    print("\nCoba periksa kembali detail koneksi database (password, nama database, dll).")
+    sys.exit(1)
