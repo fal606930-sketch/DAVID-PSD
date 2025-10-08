@@ -391,6 +391,9 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-dataset-tidak-seimbang">1. Membuat Dataset Tidak Seimbang</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-pca-2d-sebelum-oversampling">2. Visualisasi PCA 2D (Sebelum Oversampling)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapa-data">Persiapa Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-model-individual-dan-ensemble">Inisialisasi Model Individual dan Ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melatih-dan-mengevaluasi-setiap-model">Melatih dan Mengevaluasi Setiap Model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oversampling-dengan-adasyn">3. Oversampling dengan ADASYN</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-klasifikasi-dan-evaluasi">4. Proses Klasifikasi dan Evaluasi</a></li>
 </ul>
@@ -480,6 +483,138 @@ Name: count, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/7eae3e38fef3b6797457107412dce103d1d01951d767f80907144369dad5cb8e.png" src="_images/7eae3e38fef3b6797457107412dce103d1d01951d767f80907144369dad5cb8e.png" />
+</div>
+</div>
+</section>
+<section id="persiapa-data">
+<h2>Persiapa Data<a class="headerlink" href="#persiapa-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">imblearn.over_sampling</span><span class="w"> </span><span class="kn">import</span> <span class="n">SMOTE</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.naive_bayes</span><span class="w"> </span><span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">VotingClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span>
+
+<span class="c1"># --- Langkah 1: Persiapan Data (dari kode sebelumnya) ---</span>
+<span class="c1"># Memuat dataset Iris dan membuatnya tidak seimbang</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+<span class="n">df_versicolor</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">df_virginica</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">df_setosa</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">df_imbalanced</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_setosa</span><span class="p">,</span> <span class="n">df_versicolor</span><span class="p">,</span> <span class="n">df_virginica</span><span class="p">])</span>
+<span class="n">X_imbalanced</span> <span class="o">=</span> <span class="n">df_imbalanced</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y_imbalanced</span> <span class="o">=</span> <span class="n">df_imbalanced</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Menyeimbangkan data dengan SMOTE</span>
+<span class="n">smote</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_resampled</span><span class="p">,</span> <span class="n">y_resampled</span> <span class="o">=</span> <span class="n">smote</span><span class="o">.</span><span class="n">fit_resample</span><span class="p">(</span><span class="n">X_imbalanced</span><span class="p">,</span> <span class="n">y_imbalanced</span><span class="p">)</span>
+
+<span class="c1"># Membagi data yang sudah seimbang menjadi data latih dan data uji</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X_resampled</span><span class="p">,</span> <span class="n">y_resampled</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y_resampled</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="inisialisasi-model-individual-dan-ensemble">
+<h2>Inisialisasi Model Individual dan Ensemble<a class="headerlink" href="#inisialisasi-model-individual-dan-ensemble" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Inisialisasi Naive Bayes (Estimator 1)</span>
+<span class="n">clf_nb</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+
+<span class="c1"># 2. Inisialisasi SVM (Estimator 2)</span>
+<span class="n">clf_svm</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># 3. Inisialisasi Ensemble Voting Classifier</span>
+<span class="c1"># Menggabungkan Naive Bayes (&#39;nb&#39;) dan SVM (&#39;svm&#39;)</span>
+<span class="n">ensemble_model</span> <span class="o">=</span> <span class="n">VotingClassifier</span><span class="p">(</span>
+    <span class="n">estimators</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;nb&#39;</span><span class="p">,</span> <span class="n">clf_nb</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;svm&#39;</span><span class="p">,</span> <span class="n">clf_svm</span><span class="p">)],</span>
+    <span class="n">voting</span><span class="o">=</span><span class="s1">&#39;hard&#39;</span> <span class="c1"># &#39;hard&#39; voting berarti prediksi berdasarkan suara mayoritas</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="melatih-dan-mengevaluasi-setiap-model">
+<h2>Melatih dan Mengevaluasi Setiap Model<a class="headerlink" href="#melatih-dan-mengevaluasi-setiap-model" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melatih dan mengevaluasi Naive Bayes</span>
+<span class="n">clf_nb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_nb</span> <span class="o">=</span> <span class="n">clf_nb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">acc_nb</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi Model Naive Bayes: </span><span class="si">{</span><span class="n">acc_nb</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Laporan Klasifikasi Naive Bayes:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">))</span>
+
+<span class="c1"># Melatih dan mengevaluasi SVM</span>
+<span class="n">clf_svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_svm</span> <span class="o">=</span> <span class="n">clf_svm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">acc_svm</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Akurasi Model SVM: </span><span class="si">{</span><span class="n">acc_svm</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Laporan Klasifikasi SVM:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">))</span>
+
+<span class="c1"># Melatih dan mengevaluasi Model Ensemble</span>
+<span class="n">ensemble_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">y_pred_ensemble</span> <span class="o">=</span> <span class="n">ensemble_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">acc_ensemble</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_ensemble</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Akurasi Model Ensemble (Voting): </span><span class="si">{</span><span class="n">acc_ensemble</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Laporan Klasifikasi Ensemble (Voting):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_ensemble</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Akurasi Model Naive Bayes: 0.9111
+Laporan Klasifikasi Naive Bayes:
+              precision    recall  f1-score   support
+
+      setosa       1.00      1.00      1.00        15
+  versicolor       0.82      0.93      0.88        15
+   virginica       0.92      0.80      0.86        15
+
+    accuracy                           0.91        45
+   macro avg       0.92      0.91      0.91        45
+weighted avg       0.92      0.91      0.91        45
+
+
+Akurasi Model SVM: 1.0000
+Laporan Klasifikasi SVM:
+              precision    recall  f1-score   support
+
+      setosa       1.00      1.00      1.00        15
+  versicolor       1.00      1.00      1.00        15
+   virginica       1.00      1.00      1.00        15
+
+    accuracy                           1.00        45
+   macro avg       1.00      1.00      1.00        45
+weighted avg       1.00      1.00      1.00        45
+
+
+Akurasi Model Ensemble (Voting): 0.9333
+Laporan Klasifikasi Ensemble (Voting):
+              precision    recall  f1-score   support
+
+      setosa       1.00      1.00      1.00        15
+  versicolor       0.83      1.00      0.91        15
+   virginica       1.00      0.80      0.89        15
+
+    accuracy                           0.93        45
+   macro avg       0.94      0.93      0.93        45
+weighted avg       0.94      0.93      0.93        45
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -641,6 +776,9 @@ weighted avg       1.00      1.00      1.00        45
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-dataset-tidak-seimbang">1. Membuat Dataset Tidak Seimbang</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-pca-2d-sebelum-oversampling">2. Visualisasi PCA 2D (Sebelum Oversampling)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persiapa-data">Persiapa Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-model-individual-dan-ensemble">Inisialisasi Model Individual dan Ensemble</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melatih-dan-mengevaluasi-setiap-model">Melatih dan Mengevaluasi Setiap Model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oversampling-dengan-adasyn">3. Oversampling dengan ADASYN</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proses-klasifikasi-dan-evaluasi">4. Proses Klasifikasi dan Evaluasi</a></li>
 </ul>
