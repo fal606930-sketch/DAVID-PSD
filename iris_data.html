@@ -1,0 +1,1870 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Penjelasan Code2 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=720ed60b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=d2032c04" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=720ed60b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/bootstrap.css?v=b4a3e8ba" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/theme.css?v=a243ae73" />
+    <link rel="stylesheet" type="text/css" href="_static/vendor/fontawesome/6.5.2/css/all.min.css?v=f4fbef65" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'iris_data';</script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/copybutton_funcs.js?v=776a791e"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/language_data.js?v=d4673a71"></script>
+    <script src="_static/searchtools.js?v=63a53a7d"></script>
+    <script src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/scripts/bootstrap.js?v=7583a70d"></script>
+    <script src="_static/scripts/pydata-sphinx-theme.js?v=4bc35cb3"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?v=4e4fcec4"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ABOD" href="iris_data2.html" />
+    <link rel="prev" title="tugas2" href="EksplorasiData.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My sample book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Intro
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="myintro.html">my introdoction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MemahamiBisnis.html">Memahami Bisnis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DataUnderstanding.html">Data Understanding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EksplorasiData.html">tugas2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penjelasan Code2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iris_data2.html">ABOD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iris_data3.html">ADASYN (Adaptive Synthetic Sampling) pada dataset yang tidak seimbang (imbalanced)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Wine_CRISP_DM.html">Wine Dataset Analysis - CRISP-DM Methodology</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Firis_data.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/iris_data.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Penjelasan Code2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library">1. Import Library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konfigurasi-koneksi-database">2. Konfigurasi Koneksi Database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instalasi-library-yang-dibutuhkan">Instalasi Library yang Dibutuhkan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-dan-koneksi-ke-database-postgresql">Import Library dan Koneksi ke Database PostgreSQL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-environment-pycaret-untuk-deteksi-anomali">Setup Environment PyCaret untuk Deteksi Anomali</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-deteksi-outlier-knn">Membuat Model Deteksi Outlier KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memberi-label-outlier-pada-data">Memberi Label Outlier pada Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-hasil-deteksi-outlier">Visualisasi Hasil Deteksi Outlier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-environment-pycaret-untuk-clustering">Setup Environment PyCaret untuk Clustering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-clustering-k-means">Membuat Model Clustering K-Means</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memberi-label-cluster-pada-data">Memberi Label Cluster pada Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-hasil-clustering">Visualisasi Hasil Clustering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-tambahan-untuk-evaluasi-cluster">Visualisasi Tambahan untuk Evaluasi Cluster</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="penjelasan-code2">
+<h1>Penjelasan Code2<a class="headerlink" href="#penjelasan-code2" title="Link to this heading">#</a></h1>
+<section id="import-library">
+<h2>1. Import Library<a class="headerlink" href="#import-library" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>pandas</strong>: digunakan untuk manipulasi dan analisis data.</p></li>
+<li><p><strong>sqlalchemy</strong>: digunakan untuk membuat koneksi ke database SQL.</p></li>
+<li><p><strong>pycaret.clustering &amp; pycaret.anomaly</strong>: modul dari PyCaret untuk melakukan analisis clustering dan deteksi anomali.</p></li>
+</ul>
+</section>
+<section id="konfigurasi-koneksi-database">
+<h2>2. Konfigurasi Koneksi Database<a class="headerlink" href="#konfigurasi-koneksi-database" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">db_user</span> <span class="o">=</span> <span class="s1">&#39;user&#39;</span>
+<span class="n">db_password</span> <span class="o">=</span> <span class="s1">&#39;password&#39;</span>
+<span class="n">db_host</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
+<span class="n">db_port</span> <span class="o">=</span> <span class="s1">&#39;5432&#39;</span>
+<span class="n">db_name</span> <span class="o">=</span> <span class="s1">&#39;iris_data&#39;</span>
+<span class="n">table_name</span> <span class="o">=</span> <span class="s1">&#39;iris_data&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="instalasi-library-yang-dibutuhkan">
+<h2>Instalasi Library yang Dibutuhkan<a class="headerlink" href="#instalasi-library-yang-dibutuhkan" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jalankan sel ini untuk menginstal semua library yang dibutuhkan</span>
+<span class="o">%</span><span class="k">pip</span> install pycaret[full] psycopg2-binary sqlalchemy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pycaret[full] in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (3.3.2)
+Requirement already satisfied: psycopg2-binary in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (2.9.10)
+Requirement already satisfied: sqlalchemy in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (2.0.43)
+Requirement already satisfied: ipython&gt;=5.5.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (9.5.0)
+Requirement already satisfied: ipywidgets&gt;=7.6.5 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (8.1.7)
+Requirement already satisfied: tqdm&gt;=4.62.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (4.67.1)
+Requirement already satisfied: numpy&lt;1.27,&gt;=1.21 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (1.26.4)
+Requirement already satisfied: pandas&lt;2.2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (2.1.4)
+Requirement already satisfied: jinja2&gt;=3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (3.1.6)
+Requirement already satisfied: scipy&lt;=1.11.4,&gt;=1.6.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (1.11.4)
+Requirement already satisfied: joblib&lt;1.4,&gt;=1.2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (1.3.2)
+Requirement already satisfied: scikit-learn&gt;1.4.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (1.4.2)
+Requirement already satisfied: pyod&gt;=1.1.3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (2.0.5)
+Requirement already satisfied: imbalanced-learn&gt;=0.12.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (0.14.0)
+Requirement already satisfied: category-encoders&gt;=2.4.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (2.7.0)
+Requirement already satisfied: lightgbm&gt;=3.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (4.6.0)
+Requirement already satisfied: numba&gt;=0.55.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (0.61.0)
+Requirement already satisfied: requests&gt;=2.27.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (2.32.5)
+Requirement already satisfied: psutil&gt;=5.9.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (7.1.0)
+Requirement already satisfied: markupsafe&gt;=2.0.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (3.0.2)
+Requirement already satisfied: importlib-metadata&gt;=4.12.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (8.7.0)
+Requirement already satisfied: nbformat&gt;=4.2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (5.10.4)
+Requirement already satisfied: cloudpickle in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (3.1.1)
+Requirement already satisfied: deprecation&gt;=2.1.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (2.1.0)
+Requirement already satisfied: xxhash in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (3.5.0)
+Requirement already satisfied: matplotlib&lt;3.8.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (3.7.5)
+Requirement already satisfied: scikit-plot&gt;=0.3.7 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (0.3.7)
+Requirement already satisfied: yellowbrick&gt;=1.4 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (1.5)
+Requirement already satisfied: plotly&gt;=5.14.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (5.24.1)
+Requirement already satisfied: kaleido&gt;=0.2.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (1.1.0)
+Requirement already satisfied: schemdraw==0.15 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (0.15)
+Requirement already satisfied: plotly-resampler&gt;=0.8.3.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (0.11.0)
+Requirement already satisfied: statsmodels&gt;=0.12.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (0.14.5)
+Requirement already satisfied: sktime==0.26.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (0.26.0)
+Requirement already satisfied: tbats&gt;=1.1.3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (1.1.3)
+Requirement already satisfied: pmdarima&gt;=2.0.4 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (2.0.4)
+Collecting shap~=0.44.0 (from pycaret[full])
+  Obtaining dependency information for shap~=0.44.0 from https://files.pythonhosted.org/packages/a3/89/f5cca6e299320e19194ad09f6014db33208a49e8d9161e729725eb17f8a8/shap-0.44.1-cp311-cp311-win_amd64.whl.metadata
+  Using cached shap-0.44.1-cp311-cp311-win_amd64.whl.metadata (25 kB)
+Collecting interpret&gt;=0.2.7 (from pycaret[full])
+  Obtaining dependency information for interpret&gt;=0.2.7 from https://files.pythonhosted.org/packages/1c/65/5391e4dc6ca69612ef340c312711e65c512220d693aca70e74c91bd34d78/interpret-0.7.2-py3-none-any.whl.metadata
+  Using cached interpret-0.7.2-py3-none-any.whl.metadata (1.2 kB)
+Collecting umap-learn&gt;=0.5.2 (from pycaret[full])
+  Obtaining dependency information for umap-learn&gt;=0.5.2 from https://files.pythonhosted.org/packages/6b/b1/c24deeda9baf1fd491aaad941ed89e0fed6c583a117fd7b79e0a33a1e6c0/umap_learn-0.5.9.post2-py3-none-any.whl.metadata
+  Using cached umap_learn-0.5.9.post2-py3-none-any.whl.metadata (25 kB)
+Requirement already satisfied: pyyaml in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (6.0.2)
+Collecting ydata-profiling&gt;=4.3.1 (from pycaret[full])
+  Obtaining dependency information for ydata-profiling&gt;=4.3.1 from https://files.pythonhosted.org/packages/79/70/1430ad64b36c3d11abd222a95c1568ee56f5a23b07224c699f2b64825bb9/ydata_profiling-4.16.1-py2.py3-none-any.whl.metadata
+  Using cached ydata_profiling-4.16.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting explainerdashboard&gt;=0.3.8 (from pycaret[full])
+  Obtaining dependency information for explainerdashboard&gt;=0.3.8 from https://files.pythonhosted.org/packages/57/aa/d55a8972c31877348856def341a1ccc31f9c5c96b2f0f331d62886845c14/explainerdashboard-0.5.1-py3-none-any.whl.metadata
+  Using cached explainerdashboard-0.5.1-py3-none-any.whl.metadata (32 kB)
+Collecting fairlearn==0.7.0 (from pycaret[full])
+  Obtaining dependency information for fairlearn==0.7.0 from https://files.pythonhosted.org/packages/f9/22/93697472801e44344b5f7c3653762c4a143774f62b2a8bf97e7e7b1f7afa/fairlearn-0.7.0-py3-none-any.whl.metadata
+  Using cached fairlearn-0.7.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting kmodes&gt;=0.11.1 (from pycaret[full])
+  Obtaining dependency information for kmodes&gt;=0.11.1 from https://files.pythonhosted.org/packages/1a/a8/0d3bf6f3340cbcb8cf4ad02c306d157af8f09ce86aadf5346e00605870dd/kmodes-0.12.2-py2.py3-none-any.whl.metadata
+  Using cached kmodes-0.12.2-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting mlxtend&gt;=0.19.0 (from pycaret[full])
+  Obtaining dependency information for mlxtend&gt;=0.19.0 from https://files.pythonhosted.org/packages/4c/43/2fc7f76c8891aef148901f1ba3dee65c1cbac00a85ae5ee0dabc2b861256/mlxtend-0.23.4-py3-none-any.whl.metadata
+  Using cached mlxtend-0.23.4-py3-none-any.whl.metadata (7.3 kB)
+Collecting statsforecast&lt;1.6.0,&gt;=0.5.5 (from pycaret[full])
+  Obtaining dependency information for statsforecast&lt;1.6.0,&gt;=0.5.5 from https://files.pythonhosted.org/packages/ff/a1/7140ebf2bb1c513275d13a63b4718f531f5e0f285bb92e0d954009ad41ef/statsforecast-1.5.0-py3-none-any.whl.metadata
+  Using cached statsforecast-1.5.0-py3-none-any.whl.metadata (23 kB)
+Collecting hyperopt&gt;=0.2.7 (from pycaret[full])
+  Obtaining dependency information for hyperopt&gt;=0.2.7 from https://files.pythonhosted.org/packages/b6/cd/5b3334d39276067f54618ce0d0b48ed69d91352fbf137468c7095170d0e5/hyperopt-0.2.7-py2.py3-none-any.whl.metadata
+  Using cached hyperopt-0.2.7-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting optuna&gt;=3.0.0 (from pycaret[full])
+  Obtaining dependency information for optuna&gt;=3.0.0 from https://files.pythonhosted.org/packages/7f/12/cba81286cbaf0f0c3f0473846cfd992cb240bdcea816bf2ef7de8ed0f744/optuna-4.5.0-py3-none-any.whl.metadata
+  Using cached optuna-4.5.0-py3-none-any.whl.metadata (17 kB)
+Collecting optuna-integration (from pycaret[full])
+  Obtaining dependency information for optuna-integration from https://files.pythonhosted.org/packages/7e/3a/af425cfd30aede975cae592285bccf384f0dbd6bd4a0a817ef362cb4fe5d/optuna_integration-4.5.0-py3-none-any.whl.metadata
+  Using cached optuna_integration-4.5.0-py3-none-any.whl.metadata (12 kB)
+Collecting scikit-optimize&gt;=0.9.0 (from pycaret[full])
+  Obtaining dependency information for scikit-optimize&gt;=0.9.0 from https://files.pythonhosted.org/packages/65/cd/15c9ebea645cc9860aa71fe0474f4be981f10ed8e19e1fb0ef1027d4966e/scikit_optimize-0.10.2-py2.py3-none-any.whl.metadata
+  Using cached scikit_optimize-0.10.2-py2.py3-none-any.whl.metadata (9.7 kB)
+Collecting mlflow&gt;=2.0.0 (from pycaret[full])
+  Obtaining dependency information for mlflow&gt;=2.0.0 from https://files.pythonhosted.org/packages/52/fe/1ed27f800cd1709a272c6e26b78ec3d77a5ba482171ea1b5bfbcf4c067c0/mlflow-3.4.0-py3-none-any.whl.metadata
+  Using cached mlflow-3.4.0-py3-none-any.whl.metadata (30 kB)
+Collecting gradio&gt;=3.50.2 (from pycaret[full])
+  Obtaining dependency information for gradio&gt;=3.50.2 from https://files.pythonhosted.org/packages/f9/a5/08a02a12331517acd02bfd9e44a940dd141197e2dc527f7a4cfc791268de/gradio-5.46.1-py3-none-any.whl.metadata
+  Using cached gradio-5.46.1-py3-none-any.whl.metadata (16 kB)
+Collecting boto3&gt;=1.24.56 (from pycaret[full])
+  Obtaining dependency information for boto3&gt;=1.24.56 from https://files.pythonhosted.org/packages/db/26/08d814db09dc46eab747c7ebe1d4af5b5158b68e1d7de82ecc71d419eab3/boto3-1.40.35-py3-none-any.whl.metadata
+  Using cached boto3-1.40.35-py3-none-any.whl.metadata (6.7 kB)
+Collecting fastapi (from pycaret[full])
+  Obtaining dependency information for fastapi from https://files.pythonhosted.org/packages/6d/45/d9d3e8eeefbe93be1c50060a9d9a9f366dba66f288bb518a9566a23a8631/fastapi-0.117.1-py3-none-any.whl.metadata
+  Using cached fastapi-0.117.1-py3-none-any.whl.metadata (28 kB)
+Requirement already satisfied: uvicorn&gt;=0.17.6 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (0.36.0)
+Requirement already satisfied: m2cgen&gt;=0.9.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (0.10.0)
+Collecting evidently~=0.4.16 (from pycaret[full])
+  Obtaining dependency information for evidently~=0.4.16 from https://files.pythonhosted.org/packages/a6/19/f37d8c0db248b3e5f8e2f7a1d238debbc1052c89c6a1821f14567bd26e08/evidently-0.4.40-py3-none-any.whl.metadata
+  Using cached evidently-0.4.40-py3-none-any.whl.metadata (11 kB)
+Collecting dask&gt;=2024.4.1 (from pycaret[full])
+  Obtaining dependency information for dask&gt;=2024.4.1 from https://files.pythonhosted.org/packages/25/60/3fcd548bed6d25016933e4b2984c9b82e4c1e760380e03d4100b1b4726e0/dask-2025.9.1-py3-none-any.whl.metadata
+  Using cached dask-2025.9.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting distributed&gt;=2024.4.1 (from pycaret[full])
+  Obtaining dependency information for distributed&gt;=2024.4.1 from https://files.pythonhosted.org/packages/10/76/486da90111ae15daf88a25e464e271575de4197c331cca4d41c9c5db8bf4/distributed-2025.9.1-py3-none-any.whl.metadata
+  Using cached distributed-2025.9.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting fugue~=0.8.0 (from pycaret[full])
+  Obtaining dependency information for fugue~=0.8.0 from https://files.pythonhosted.org/packages/ae/47/d3449da0b9cad85a361bc1003554710a5b612cf60bc2840096e93e5cdbb3/fugue-0.8.7-py3-none-any.whl.metadata
+  Using cached fugue-0.8.7-py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: flask in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (3.1.2)
+Requirement already satisfied: Werkzeug&lt;3.0,&gt;=2.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (2.3.8)
+Requirement already satisfied: pytest&lt;8.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (7.4.4)
+Collecting moto&lt;5.0.0 (from pycaret[full])
+  Obtaining dependency information for moto&lt;5.0.0 from https://files.pythonhosted.org/packages/51/0f/ef410e6660d381e04cb6f33065d03b3aefd3444d558fcdd41ef235a1802c/moto-4.2.14-py2.py3-none-any.whl.metadata
+  Using cached moto-4.2.14-py2.py3-none-any.whl.metadata (12 kB)
+Collecting fugue[dask] (from pycaret[full])
+  Obtaining dependency information for fugue[dask] from https://files.pythonhosted.org/packages/ec/38/46a0ef179f7279207a3263afeb8da4dd73f44d00b6cc999c96a39112d284/fugue-0.9.1-py3-none-any.whl.metadata
+  Using cached fugue-0.9.1-py3-none-any.whl.metadata (18 kB)
+Requirement already satisfied: dash[testing] in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pycaret[full]) (3.2.0)
+Collecting scikit-learn-intelex&gt;=2023.0.1 (from pycaret[full])
+  Obtaining dependency information for scikit-learn-intelex&gt;=2023.0.1 from https://files.pythonhosted.org/packages/b6/f3/3ed80d8724a037d1b3754ce4a5851c407c9bfb8b4471ea464d569e353d50/scikit_learn_intelex-2025.8.0-py311-none-win_amd64.whl.metadata
+  Using cached scikit_learn_intelex-2025.8.0-py311-none-win_amd64.whl.metadata (11 kB)
+Collecting catboost&gt;=0.23.2 (from pycaret[full])
+  Obtaining dependency information for catboost&gt;=0.23.2 from https://files.pythonhosted.org/packages/0e/91/e60d80ce72e5fce94fa672908b1f7ffb881701027130b7d637bb6b6561a4/catboost-1.2.8-cp311-cp311-win_amd64.whl.metadata
+  Using cached catboost-1.2.8-cp311-cp311-win_amd64.whl.metadata (1.5 kB)
+Requirement already satisfied: packaging in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from sktime==0.26.0-&gt;pycaret[full]) (24.2)
+Requirement already satisfied: scikit-base&lt;0.8.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from sktime==0.26.0-&gt;pycaret[full]) (0.7.8)
+Requirement already satisfied: greenlet&gt;=1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from sqlalchemy) (3.2.4)
+Requirement already satisfied: typing-extensions&gt;=4.6.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from sqlalchemy) (4.15.0)
+Collecting botocore&lt;1.41.0,&gt;=1.40.35 (from boto3&gt;=1.24.56-&gt;pycaret[full])
+  Obtaining dependency information for botocore&lt;1.41.0,&gt;=1.40.35 from https://files.pythonhosted.org/packages/42/f4/9942dfb01a8a849daac34b15d5b7ca994c52ef131db2fa3f6e6995f61e0a/botocore-1.40.35-py3-none-any.whl.metadata
+  Using cached botocore-1.40.35-py3-none-any.whl.metadata (5.7 kB)
+Requirement already satisfied: jmespath&lt;2.0.0,&gt;=0.7.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from boto3&gt;=1.24.56-&gt;pycaret[full]) (1.0.1)
+Collecting s3transfer&lt;0.15.0,&gt;=0.14.0 (from boto3&gt;=1.24.56-&gt;pycaret[full])
+  Obtaining dependency information for s3transfer&lt;0.15.0,&gt;=0.14.0 from https://files.pythonhosted.org/packages/48/f0/ae7ca09223a81a1d890b2557186ea015f6e0502e9b8cb8e1813f1d8cfa4e/s3transfer-0.14.0-py3-none-any.whl.metadata
+  Using cached s3transfer-0.14.0-py3-none-any.whl.metadata (1.7 kB)
+Requirement already satisfied: graphviz in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from catboost&gt;=0.23.2-&gt;pycaret[full]) (0.21)
+Requirement already satisfied: six in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from catboost&gt;=0.23.2-&gt;pycaret[full]) (1.17.0)
+Requirement already satisfied: patsy&gt;=0.5.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from category-encoders&gt;=2.4.0-&gt;pycaret[full]) (1.0.1)
+Requirement already satisfied: click&gt;=8.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dask&gt;=2024.4.1-&gt;pycaret[full]) (8.2.1)
+Requirement already satisfied: fsspec&gt;=2021.09.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dask&gt;=2024.4.1-&gt;pycaret[full]) (2025.9.0)
+Requirement already satisfied: partd&gt;=1.4.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dask&gt;=2024.4.1-&gt;pycaret[full]) (1.4.2)
+Requirement already satisfied: toolz&gt;=0.10.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dask&gt;=2024.4.1-&gt;pycaret[full]) (1.0.0)
+Requirement already satisfied: locket&gt;=1.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from distributed&gt;=2024.4.1-&gt;pycaret[full]) (1.0.0)
+Requirement already satisfied: msgpack&gt;=1.0.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from distributed&gt;=2024.4.1-&gt;pycaret[full]) (1.1.1)
+Requirement already satisfied: sortedcontainers&gt;=2.0.5 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from distributed&gt;=2024.4.1-&gt;pycaret[full]) (2.4.0)
+Requirement already satisfied: tblib&gt;=1.6.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from distributed&gt;=2024.4.1-&gt;pycaret[full]) (3.1.0)
+Requirement already satisfied: tornado&gt;=6.2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from distributed&gt;=2024.4.1-&gt;pycaret[full]) (6.5.2)
+Requirement already satisfied: urllib3&gt;=1.26.5 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from distributed&gt;=2024.4.1-&gt;pycaret[full]) (1.26.20)
+Requirement already satisfied: zict&gt;=3.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from distributed&gt;=2024.4.1-&gt;pycaret[full]) (3.0.0)
+Collecting nltk&gt;=3.6.7 (from evidently~=0.4.16-&gt;pycaret[full])
+  Obtaining dependency information for nltk&gt;=3.6.7 from https://files.pythonhosted.org/packages/4d/66/7d9e26593edda06e8cb531874633f7c2372279c3b0f46235539fe546df8b/nltk-3.9.1-py3-none-any.whl.metadata
+  Using cached nltk-3.9.1-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: pydantic&gt;=1.10.13 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from evidently~=0.4.16-&gt;pycaret[full]) (2.11.9)
+Collecting litestar&gt;=2.8.3 (from evidently~=0.4.16-&gt;pycaret[full])
+  Obtaining dependency information for litestar&gt;=2.8.3 from https://files.pythonhosted.org/packages/52/04/0935667c3cee2a26152102b9319fdfe987b0f765e14e0311c17ca6698820/litestar-2.17.0-py3-none-any.whl.metadata
+  Using cached litestar-2.17.0-py3-none-any.whl.metadata (26 kB)
+Requirement already satisfied: typing-inspect&gt;=0.9.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from evidently~=0.4.16-&gt;pycaret[full]) (0.9.0)
+Requirement already satisfied: watchdog&gt;=3.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from evidently~=0.4.16-&gt;pycaret[full]) (6.0.0)
+Collecting typer&gt;=0.3 (from evidently~=0.4.16-&gt;pycaret[full])
+  Obtaining dependency information for typer&gt;=0.3 from https://files.pythonhosted.org/packages/1e/fa/6473c00b5eb26a2ba427813107699d3e6f4e1a4afad3f7494b17bdef3422/typer-0.19.1-py3-none-any.whl.metadata
+  Using cached typer-0.19.1-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: rich&gt;=13 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from evidently~=0.4.16-&gt;pycaret[full]) (14.1.0)
+Collecting iterative-telemetry&gt;=0.0.5 (from evidently~=0.4.16-&gt;pycaret[full])
+  Obtaining dependency information for iterative-telemetry&gt;=0.0.5 from https://files.pythonhosted.org/packages/1a/82/7331bbf84f1ccce7a2dd09a580c7bad38417cf35c84dc0b81bce2cf779b9/iterative_telemetry-0.0.10-py3-none-any.whl.metadata
+  Using cached iterative_telemetry-0.0.10-py3-none-any.whl.metadata (4.1 kB)
+Requirement already satisfied: dynaconf&gt;=3.2.4 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from evidently~=0.4.16-&gt;pycaret[full]) (3.2.11)
+Requirement already satisfied: certifi&gt;=2024.7.4 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from evidently~=0.4.16-&gt;pycaret[full]) (2025.8.3)
+Requirement already satisfied: ujson&gt;=5.4.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from evidently~=0.4.16-&gt;pycaret[full]) (5.11.0)
+Requirement already satisfied: uuid6&gt;=2024.7.10 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from evidently~=0.4.16-&gt;pycaret[full]) (2025.0.1)
+Collecting cryptography&gt;=43.0.1 (from evidently~=0.4.16-&gt;pycaret[full])
+  Obtaining dependency information for cryptography&gt;=43.0.1 from https://files.pythonhosted.org/packages/95/0f/cd29a35e0d6e78a0ee61793564c8cff0929c38391cb0de27627bdc7525aa/cryptography-46.0.1-cp311-abi3-win_amd64.whl.metadata
+  Using cached cryptography-46.0.1-cp311-abi3-win_amd64.whl.metadata (5.7 kB)
+Collecting dash-auth (from explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for dash-auth from https://files.pythonhosted.org/packages/19/42/d636affcd8074f7f48156a99d8854e5be951d8601dcb4178231c92c988d1/dash_auth-2.3.0-py3-none-any.whl.metadata
+  Using cached dash_auth-2.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting dash-bootstrap-components&lt;3,&gt;=1 (from explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for dash-bootstrap-components&lt;3,&gt;=1 from https://files.pythonhosted.org/packages/d6/38/1efeec8b4d741c09ccd169baf8a00c07a0176b58e418d4cd0c30dffedd22/dash_bootstrap_components-2.0.4-py3-none-any.whl.metadata
+  Using cached dash_bootstrap_components-2.0.4-py3-none-any.whl.metadata (18 kB)
+Collecting dash&lt;3,&gt;=2.10 (from explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for dash&lt;3,&gt;=2.10 from https://files.pythonhosted.org/packages/72/ef/d46131f4817f18b329e4fb7c53ba1d31774239d91266a74bccdc932708cc/dash-2.18.2-py3-none-any.whl.metadata
+  Using cached dash-2.18.2-py3-none-any.whl.metadata (10 kB)
+Collecting dtreeviz&gt;=2.1 (from explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for dtreeviz&gt;=2.1 from https://files.pythonhosted.org/packages/b3/e8/44eb59345d8ba9d2f6610df6441d63082f46021c1685de24716c22f55383/dtreeviz-2.2.2-py3-none-any.whl.metadata
+  Using cached dtreeviz-2.2.2-py3-none-any.whl.metadata (2.4 kB)
+Collecting flask-simplelogin (from explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for flask-simplelogin from https://files.pythonhosted.org/packages/96/dc/645e9fd39cd24a3d4c2279cd99faaa0bb50001184f458cf8a19eccec524f/flask_simplelogin-0.2.0-py3-none-any.whl.metadata
+  Using cached flask_simplelogin-0.2.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting flask-wtf&gt;=1.1 (from explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for flask-wtf&gt;=1.1 from https://files.pythonhosted.org/packages/dc/19/354449145fbebb65e7c621235b6ad69bebcfaec2142481f044d0ddc5b5c5/flask_wtf-1.2.2-py3-none-any.whl.metadata
+  Using cached flask_wtf-1.2.2-py3-none-any.whl.metadata (3.4 kB)
+Collecting jupyter-dash&gt;=0.4.1 (from explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for jupyter-dash&gt;=0.4.1 from https://files.pythonhosted.org/packages/38/62/2c51aeb18c6d765c03c911e4d70f029ccb9de1a991d88cf30e362d2433c9/jupyter_dash-0.4.2-py3-none-any.whl.metadata
+  Using cached jupyter_dash-0.4.2-py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: oyaml in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (1.0)
+Requirement already satisfied: waitress in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (3.0.2)
+Collecting triad&gt;=0.9.3 (from fugue~=0.8.0-&gt;pycaret[full])
+  Obtaining dependency information for triad&gt;=0.9.3 from https://files.pythonhosted.org/packages/4f/c6/4aedce0522bb3c72f2d770e7e4c18b0e1f7716d2c70a865e94c89ebcf7e6/triad-0.9.8-py3-none-any.whl.metadata
+  Using cached triad-0.9.8-py3-none-any.whl.metadata (6.3 kB)
+Collecting adagio&gt;=0.2.4 (from fugue~=0.8.0-&gt;pycaret[full])
+  Obtaining dependency information for adagio&gt;=0.2.4 from https://files.pythonhosted.org/packages/f4/40/3592ba5232475778ab690cdbfbc38e73886c26c361a82484b49fab427e60/adagio-0.2.6-py3-none-any.whl.metadata
+  Using cached adagio-0.2.6-py3-none-any.whl.metadata (1.8 kB)
+Collecting qpd&gt;=0.4.4 (from fugue~=0.8.0-&gt;pycaret[full])
+  Obtaining dependency information for qpd&gt;=0.4.4 from https://files.pythonhosted.org/packages/56/1f/909bff3b693dc50e0e4318922a93d3047c948acd3011a8c39665cc125d19/qpd-0.4.4-py3-none-any.whl.metadata
+  Using cached qpd-0.4.4-py3-none-any.whl.metadata (6.4 kB)
+Collecting fugue-sql-antlr&gt;=0.1.6 (from fugue~=0.8.0-&gt;pycaret[full])
+  Using cached fugue_sql_antlr-0.2.2-py3-none-any.whl
+Requirement already satisfied: sqlglot in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from fugue~=0.8.0-&gt;pycaret[full]) (27.16.3)
+Requirement already satisfied: aiofiles&lt;25.0,&gt;=22.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (24.1.0)
+Requirement already satisfied: anyio&lt;5.0,&gt;=3.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (4.10.0)
+Requirement already satisfied: brotli&gt;=1.1.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (1.1.0)
+Requirement already satisfied: ffmpy in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (0.6.1)
+Collecting gradio-client==1.13.1 (from gradio&gt;=3.50.2-&gt;pycaret[full])
+  Obtaining dependency information for gradio-client==1.13.1 from https://files.pythonhosted.org/packages/9a/02/dd4ecbcf654abc4b969f84def5735b7570224e9590912523b9f3eaf0d741/gradio_client-1.13.1-py3-none-any.whl.metadata
+  Using cached gradio_client-1.13.1-py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: groovy~=0.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (0.1.2)
+Requirement already satisfied: httpx&lt;1.0,&gt;=0.24.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (0.28.1)
+Collecting huggingface-hub&lt;1.0,&gt;=0.33.5 (from gradio&gt;=3.50.2-&gt;pycaret[full])
+  Obtaining dependency information for huggingface-hub&lt;1.0,&gt;=0.33.5 from https://files.pythonhosted.org/packages/fe/85/a18508becfa01f1e4351b5e18651b06d210dbd96debccd48a452acccb901/huggingface_hub-0.35.0-py3-none-any.whl.metadata
+  Using cached huggingface_hub-0.35.0-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: orjson~=3.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (3.11.3)
+Requirement already satisfied: pillow&lt;12.0,&gt;=8.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (11.3.0)
+Requirement already satisfied: pydub in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (0.25.1)
+Requirement already satisfied: python-multipart&gt;=0.0.18 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (0.0.20)
+Requirement already satisfied: ruff&gt;=0.9.3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (0.13.1)
+Collecting safehttpx&lt;0.2.0,&gt;=0.1.6 (from gradio&gt;=3.50.2-&gt;pycaret[full])
+  Obtaining dependency information for safehttpx&lt;0.2.0,&gt;=0.1.6 from https://files.pythonhosted.org/packages/4d/c0/1108ad9f01567f66b3154063605b350b69c3c9366732e09e45f9fd0d1deb/safehttpx-0.1.6-py3-none-any.whl.metadata
+  Using cached safehttpx-0.1.6-py3-none-any.whl.metadata (4.2 kB)
+Requirement already satisfied: semantic-version~=2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (2.10.0)
+Requirement already satisfied: starlette&lt;1.0,&gt;=0.40.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (0.48.0)
+Requirement already satisfied: tomlkit&lt;0.14.0,&gt;=0.12.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio&gt;=3.50.2-&gt;pycaret[full]) (0.13.3)
+Requirement already satisfied: websockets&lt;16.0,&gt;=10.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gradio-client==1.13.1-&gt;gradio&gt;=3.50.2-&gt;pycaret[full]) (15.0.1)
+Requirement already satisfied: networkx&gt;=2.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from hyperopt&gt;=0.2.7-&gt;pycaret[full]) (3.5)
+Requirement already satisfied: future in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from hyperopt&gt;=0.2.7-&gt;pycaret[full]) (1.0.0)
+Requirement already satisfied: py4j in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from hyperopt&gt;=0.2.7-&gt;pycaret[full]) (0.10.9.9)
+Requirement already satisfied: threadpoolctl&lt;4,&gt;=2.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from imbalanced-learn&gt;=0.12.0-&gt;pycaret[full]) (3.6.0)
+Requirement already satisfied: zipp&gt;=3.20 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from importlib-metadata&gt;=4.12.0-&gt;pycaret[full]) (3.23.0)
+Collecting interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2 (from interpret&gt;=0.2.7-&gt;pycaret[full])
+  Obtaining dependency information for interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2 from https://files.pythonhosted.org/packages/9d/a7/8b3de4f7a739b6728dee6fd7460464ab6f9a41f2ca08f52fdf9b7f9d8261/interpret_core-0.7.2-py3-none-any.whl.metadata
+  Using cached interpret_core-0.7.2-py3-none-any.whl.metadata (3.0 kB)
+Requirement already satisfied: ipykernel&gt;=4.10.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full]) (6.30.1)
+Collecting SALib&gt;=1.3.3 (from interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full])
+  Obtaining dependency information for SALib&gt;=1.3.3 from https://files.pythonhosted.org/packages/e1/40/393b381779d379afbb0e281d9f69cb511022e41a726f7871a929faec2b11/salib-1.5.1-py3-none-any.whl.metadata
+  Using cached salib-1.5.1-py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: dill&gt;=0.2.5 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full]) (0.4.0)
+Requirement already satisfied: aplr&gt;=10.6.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full]) (10.12.0)
+Collecting dash-cytoscape&gt;=0.1.1 (from interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full])
+  Using cached dash_cytoscape-1.0.2-py3-none-any.whl
+Collecting gevent&gt;=1.3.6 (from interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full])
+  Obtaining dependency information for gevent&gt;=1.3.6 from https://files.pythonhosted.org/packages/1d/6c/bb21fd9c095506aeeaa616579a356aa50935165cc0f1e250e1e0575620a7/gevent-25.9.1-cp311-cp311-win_amd64.whl.metadata
+  Using cached gevent-25.9.1-cp311-cp311-win_amd64.whl.metadata (14 kB)
+Requirement already satisfied: colorama in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipython&gt;=5.5.0-&gt;pycaret[full]) (0.4.6)
+Requirement already satisfied: decorator in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipython&gt;=5.5.0-&gt;pycaret[full]) (5.2.1)
+Requirement already satisfied: ipython-pygments-lexers in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipython&gt;=5.5.0-&gt;pycaret[full]) (1.1.1)
+Requirement already satisfied: jedi&gt;=0.16 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipython&gt;=5.5.0-&gt;pycaret[full]) (0.19.2)
+Requirement already satisfied: matplotlib-inline in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipython&gt;=5.5.0-&gt;pycaret[full]) (0.1.7)
+Requirement already satisfied: prompt_toolkit&lt;3.1.0,&gt;=3.0.41 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipython&gt;=5.5.0-&gt;pycaret[full]) (3.0.52)
+Requirement already satisfied: pygments&gt;=2.4.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipython&gt;=5.5.0-&gt;pycaret[full]) (2.19.2)
+Requirement already satisfied: stack_data in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipython&gt;=5.5.0-&gt;pycaret[full]) (0.6.3)
+Requirement already satisfied: traitlets&gt;=5.13.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipython&gt;=5.5.0-&gt;pycaret[full]) (5.14.3)
+Requirement already satisfied: comm&gt;=0.1.3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret[full]) (0.2.3)
+Requirement already satisfied: widgetsnbextension~=4.0.14 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret[full]) (4.0.14)
+Requirement already satisfied: jupyterlab_widgets~=3.0.15 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipywidgets&gt;=7.6.5-&gt;pycaret[full]) (3.0.15)
+Requirement already satisfied: choreographer&gt;=1.0.10 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from kaleido&gt;=0.2.1-&gt;pycaret[full]) (1.1.1)
+Requirement already satisfied: logistro&gt;=1.0.8 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from kaleido&gt;=0.2.1-&gt;pycaret[full]) (1.1.0)
+Requirement already satisfied: pytest-timeout&gt;=2.4.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from kaleido&gt;=0.2.1-&gt;pycaret[full]) (2.4.0)
+Requirement already satisfied: contourpy&gt;=1.0.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from matplotlib&lt;3.8.0-&gt;pycaret[full]) (1.3.3)
+Requirement already satisfied: cycler&gt;=0.10 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from matplotlib&lt;3.8.0-&gt;pycaret[full]) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from matplotlib&lt;3.8.0-&gt;pycaret[full]) (4.59.2)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from matplotlib&lt;3.8.0-&gt;pycaret[full]) (1.4.9)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from matplotlib&lt;3.8.0-&gt;pycaret[full]) (3.2.3)
+Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from matplotlib&lt;3.8.0-&gt;pycaret[full]) (2.9.0.post0)
+Collecting mlflow-skinny==3.4.0 (from mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for mlflow-skinny==3.4.0 from https://files.pythonhosted.org/packages/1b/94/7acd7c6970cc75da1fd3b550e43d8b99068032022f47b0ef224a137ec679/mlflow_skinny-3.4.0-py3-none-any.whl.metadata
+  Using cached mlflow_skinny-3.4.0-py3-none-any.whl.metadata (31 kB)
+Collecting mlflow-tracing==3.4.0 (from mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for mlflow-tracing==3.4.0 from https://files.pythonhosted.org/packages/ae/96/403b1191ccf587f19a8c94085477600d6e6b3d61a7aff46f353b20b450f9/mlflow_tracing-3.4.0-py3-none-any.whl.metadata
+  Using cached mlflow_tracing-3.4.0-py3-none-any.whl.metadata (19 kB)
+Collecting alembic!=1.10.0,&lt;2 (from mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for alembic!=1.10.0,&lt;2 from https://files.pythonhosted.org/packages/39/4a/4c61d4c84cfd9befb6fa08a702535b27b21fff08c946bc2f6139decbf7f7/alembic-1.16.5-py3-none-any.whl.metadata
+  Using cached alembic-1.16.5-py3-none-any.whl.metadata (7.3 kB)
+Collecting cryptography&gt;=43.0.1 (from evidently~=0.4.16-&gt;pycaret[full])
+  Obtaining dependency information for cryptography&gt;=43.0.1 from https://files.pythonhosted.org/packages/b3/61/0ab90f421c6194705a99d0fa9f6ee2045d916e4455fdbb095a9c2c9a520f/cryptography-45.0.7-cp311-abi3-win_amd64.whl.metadata
+  Using cached cryptography-45.0.7-cp311-abi3-win_amd64.whl.metadata (5.7 kB)
+Collecting docker&lt;8,&gt;=4.0.0 (from mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for docker&lt;8,&gt;=4.0.0 from https://files.pythonhosted.org/packages/e3/26/57c6fb270950d476074c087527a558ccb6f4436657314bfb6cdf484114c4/docker-7.1.0-py3-none-any.whl.metadata
+  Using cached docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting fastmcp&lt;3,&gt;=2.0.0 (from mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for fastmcp&lt;3,&gt;=2.0.0 from https://files.pythonhosted.org/packages/96/79/0fd386e61819e205563d4eb15da76564b80dc2edd3c64b46f2706235daec/fastmcp-2.12.3-py3-none-any.whl.metadata
+  Using cached fastmcp-2.12.3-py3-none-any.whl.metadata (17 kB)
+Collecting graphene&lt;4 (from mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for graphene&lt;4 from https://files.pythonhosted.org/packages/66/e0/61d8e98007182e6b2aca7cf65904721fb2e4bce0192272ab9cb6f69d8812/graphene-3.4.3-py2.py3-none-any.whl.metadata
+  Using cached graphene-3.4.3-py2.py3-none-any.whl.metadata (6.9 kB)
+Requirement already satisfied: pyarrow&lt;22,&gt;=4.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from mlflow&gt;=2.0.0-&gt;pycaret[full]) (21.0.0)
+Requirement already satisfied: cachetools&lt;7,&gt;=5.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (5.5.2)
+Collecting databricks-sdk&lt;1,&gt;=0.20.0 (from mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for databricks-sdk&lt;1,&gt;=0.20.0 from https://files.pythonhosted.org/packages/0e/70/4bd71d09b7d7f7bc9b4d0ceb20a020fd4f667d82aafc43e4d115bd41989e/databricks_sdk-0.65.0-py3-none-any.whl.metadata
+  Using cached databricks_sdk-0.65.0-py3-none-any.whl.metadata (39 kB)
+Requirement already satisfied: gitpython&lt;4,&gt;=3.1.9 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (3.1.45)
+Requirement already satisfied: opentelemetry-api&lt;3,&gt;=1.9.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (1.37.0)
+Requirement already satisfied: opentelemetry-proto&lt;3,&gt;=1.9.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (1.37.0)
+Collecting opentelemetry-sdk&lt;3,&gt;=1.9.0 (from mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for opentelemetry-sdk&lt;3,&gt;=1.9.0 from https://files.pythonhosted.org/packages/9f/62/9f4ad6a54126fb00f7ed4bb5034964c6e4f00fcd5a905e115bd22707e20d/opentelemetry_sdk-1.37.0-py3-none-any.whl.metadata
+  Using cached opentelemetry_sdk-1.37.0-py3-none-any.whl.metadata (1.5 kB)
+Requirement already satisfied: protobuf&lt;7,&gt;=3.12.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (6.32.0)
+Requirement already satisfied: python-dotenv&lt;2,&gt;=0.19.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (1.1.1)
+Requirement already satisfied: sqlparse&lt;1,&gt;=0.4.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (0.5.3)
+Requirement already satisfied: blinker&gt;=1.9.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from flask-&gt;pycaret[full]) (1.9.0)
+Requirement already satisfied: itsdangerous&gt;=2.2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from flask-&gt;pycaret[full]) (2.2.0)
+INFO: pip is looking at multiple versions of flask to determine which version is compatible with other requirements. This could take a while.
+Collecting flask (from pycaret[full])
+  Obtaining dependency information for flask from https://files.pythonhosted.org/packages/3d/68/9d4508e893976286d2ead7f8f571314af6c2037af34853a30fd769c02e9d/flask-3.1.1-py3-none-any.whl.metadata
+  Using cached flask-3.1.1-py3-none-any.whl.metadata (3.0 kB)
+  Obtaining dependency information for flask from https://files.pythonhosted.org/packages/af/47/93213ee66ef8fae3b93b3e29206f6b251e65c97bd91d8e1c5596ef15af0a/flask-3.1.0-py3-none-any.whl.metadata
+  Using cached flask-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+  Obtaining dependency information for flask from https://files.pythonhosted.org/packages/61/80/ffe1da13ad9300f87c93af113edd0638c75138c42a0994becfacac078c06/flask-3.0.3-py3-none-any.whl.metadata
+  Using cached flask-3.0.3-py3-none-any.whl.metadata (3.2 kB)
+  Obtaining dependency information for flask from https://files.pythonhosted.org/packages/93/a6/aa98bfe0eb9b8b15d36cdfd03c8ca86a03968a87f27ce224fb4f766acb23/flask-3.0.2-py3-none-any.whl.metadata
+  Using cached flask-3.0.2-py3-none-any.whl.metadata (3.6 kB)
+  Obtaining dependency information for flask from https://files.pythonhosted.org/packages/bd/0e/63738e88e981ae57c23bad6c499898314a1110a4141f77d7bd929b552fb4/flask-3.0.1-py3-none-any.whl.metadata
+  Using cached flask-3.0.1-py3-none-any.whl.metadata (3.6 kB)
+  Obtaining dependency information for flask from https://files.pythonhosted.org/packages/36/42/015c23096649b908c809c69388a805a571a3bea44362fe87e33fc3afa01f/flask-3.0.0-py3-none-any.whl.metadata
+  Using cached flask-3.0.0-py3-none-any.whl.metadata (3.6 kB)
+  Obtaining dependency information for flask from https://files.pythonhosted.org/packages/fd/56/26f0be8adc2b4257df20c1c4260ddd0aa396cf8e75d90ab2f7ff99bc34f9/flask-2.3.3-py3-none-any.whl.metadata
+  Using cached flask-2.3.3-py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: xmltodict in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from moto&lt;5.0.0-&gt;pycaret[full]) (1.0.2)
+Collecting responses&gt;=0.13.0 (from moto&lt;5.0.0-&gt;pycaret[full])
+  Obtaining dependency information for responses&gt;=0.13.0 from https://files.pythonhosted.org/packages/1c/4c/cc276ce57e572c102d9542d383b2cfd551276581dc60004cb94fe8774c11/responses-0.25.8-py3-none-any.whl.metadata
+  Using cached responses-0.25.8-py3-none-any.whl.metadata (47 kB)
+Requirement already satisfied: fastjsonschema&gt;=2.15 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from nbformat&gt;=4.2.0-&gt;pycaret[full]) (2.21.2)
+Requirement already satisfied: jsonschema&gt;=2.6 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from nbformat&gt;=4.2.0-&gt;pycaret[full]) (4.25.1)
+Requirement already satisfied: jupyter-core!=5.0.*,&gt;=4.12 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from nbformat&gt;=4.2.0-&gt;pycaret[full]) (5.8.1)
+Collecting llvmlite&lt;0.45,&gt;=0.44.0dev0 (from numba&gt;=0.55.0-&gt;pycaret[full])
+  Obtaining dependency information for llvmlite&lt;0.45,&gt;=0.44.0dev0 from https://files.pythonhosted.org/packages/5f/c6/258801143975a6d09a373f2641237992496e15567b907a4d401839d671b8/llvmlite-0.44.0-cp311-cp311-win_amd64.whl.metadata
+  Using cached llvmlite-0.44.0-cp311-cp311-win_amd64.whl.metadata (5.0 kB)
+Requirement already satisfied: colorlog in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from optuna&gt;=3.0.0-&gt;pycaret[full]) (6.9.0)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pandas&lt;2.2.0-&gt;pycaret[full]) (2025.2)
+Requirement already satisfied: tzdata&gt;=2022.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pandas&lt;2.2.0-&gt;pycaret[full]) (2025.2)
+Requirement already satisfied: tenacity&gt;=6.2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from plotly&gt;=5.14.0-&gt;pycaret[full]) (9.1.2)
+Requirement already satisfied: tsdownsample&gt;=0.1.3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from plotly-resampler&gt;=0.8.3.1-&gt;pycaret[full]) (0.1.4.1)
+Requirement already satisfied: Cython!=0.29.18,!=0.29.31,&gt;=0.29 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pmdarima&gt;=2.0.4-&gt;pycaret[full]) (3.1.4)
+Requirement already satisfied: setuptools!=50.0.0,&gt;=38.6.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pmdarima&gt;=2.0.4-&gt;pycaret[full]) (80.9.0)
+Requirement already satisfied: iniconfig in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pytest&lt;8.0.0-&gt;pycaret[full]) (2.1.0)
+Requirement already satisfied: pluggy&lt;2.0,&gt;=0.12 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pytest&lt;8.0.0-&gt;pycaret[full]) (1.5.0)
+Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from requests&gt;=2.27.1-&gt;pycaret[full]) (3.4.3)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from requests&gt;=2.27.1-&gt;pycaret[full]) (3.10)
+Collecting daal==2025.8.0 (from scikit-learn-intelex&gt;=2023.0.1-&gt;pycaret[full])
+  Obtaining dependency information for daal==2025.8.0 from https://files.pythonhosted.org/packages/21/3a/afbc8738d91419a89acf314c6a2c165df22b881a54a4b1d1f9e03d5f7bce/daal-2025.8.0-py2.py3-none-win_amd64.whl.metadata
+  Using cached daal-2025.8.0-py2.py3-none-win_amd64.whl.metadata (1.1 kB)
+Requirement already satisfied: tbb==2022.* in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from daal==2025.8.0-&gt;scikit-learn-intelex&gt;=2023.0.1-&gt;pycaret[full]) (2022.2.0)
+Requirement already satisfied: tcmlib==1.* in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from tbb==2022.*-&gt;daal==2025.8.0-&gt;scikit-learn-intelex&gt;=2023.0.1-&gt;pycaret[full]) (1.4.0)
+Requirement already satisfied: pyaml&gt;=16.9 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from scikit-optimize&gt;=0.9.0-&gt;pycaret[full]) (25.7.0)
+Requirement already satisfied: slicer==0.0.7 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from shap~=0.44.0-&gt;pycaret[full]) (0.0.7)
+INFO: pip is looking at multiple versions of umap-learn to determine which version is compatible with other requirements. This could take a while.
+Collecting umap-learn&gt;=0.5.2 (from pycaret[full])
+  Obtaining dependency information for umap-learn&gt;=0.5.2 from https://files.pythonhosted.org/packages/68/5a/3fe95746301fe6d8a8cd59af06fa74599b24dc8077575ca5d3ef12988f61/umap_learn-0.5.8-py3-none-any.whl.metadata
+  Using cached umap_learn-0.5.8-py3-none-any.whl.metadata (23 kB)
+  Obtaining dependency information for umap-learn&gt;=0.5.2 from https://files.pythonhosted.org/packages/3c/8f/671c0e1f2572ba625cbcc1faeba9435e00330c3d6962858711445cf1e817/umap_learn-0.5.7-py3-none-any.whl.metadata
+  Using cached umap_learn-0.5.7-py3-none-any.whl.metadata (21 kB)
+Collecting pynndescent&gt;=0.5 (from umap-learn&gt;=0.5.2-&gt;pycaret[full])
+  Obtaining dependency information for pynndescent&gt;=0.5 from https://files.pythonhosted.org/packages/d2/53/d23a97e0a2c690d40b165d1062e2c4ccc796be458a1ce59f6ba030434663/pynndescent-0.5.13-py3-none-any.whl.metadata
+  Using cached pynndescent-0.5.13-py3-none-any.whl.metadata (6.8 kB)
+Requirement already satisfied: h11&gt;=0.8 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from uvicorn&gt;=0.17.6-&gt;pycaret[full]) (0.16.0)
+Collecting visions[type_image_path]&lt;0.8.2,&gt;=0.7.5 (from ydata-profiling&gt;=4.3.1-&gt;pycaret[full])
+  Obtaining dependency information for visions[type_image_path]&lt;0.8.2,&gt;=0.7.5 from https://files.pythonhosted.org/packages/90/36/4a0d674198adabadba21eb4048df5cc2e25a4ecff38d75e974d51a83fda2/visions-0.8.1-py3-none-any.whl.metadata
+  Using cached visions-0.8.1-py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: htmlmin==0.1.12 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ydata-profiling&gt;=4.3.1-&gt;pycaret[full]) (0.1.12)
+Collecting phik&lt;0.13,&gt;=0.11.1 (from ydata-profiling&gt;=4.3.1-&gt;pycaret[full])
+  Obtaining dependency information for phik&lt;0.13,&gt;=0.11.1 from https://files.pythonhosted.org/packages/86/a9/2e70ab81c9383c92d95d776a08fa6253529a5f018d02e2e78791195b1b71/phik-0.12.5-cp311-cp311-win_amd64.whl.metadata
+  Using cached phik-0.12.5-cp311-cp311-win_amd64.whl.metadata (5.6 kB)
+Collecting seaborn&lt;0.14,&gt;=0.10.1 (from ydata-profiling&gt;=4.3.1-&gt;pycaret[full])
+  Obtaining dependency information for seaborn&lt;0.14,&gt;=0.10.1 from https://files.pythonhosted.org/packages/83/11/00d3c3dfc25ad54e731d91449895a79e4bf2384dc3ac01809010ba88f6d5/seaborn-0.13.2-py3-none-any.whl.metadata
+  Using cached seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Requirement already satisfied: multimethod&lt;2,&gt;=1.4 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ydata-profiling&gt;=4.3.1-&gt;pycaret[full]) (1.12)
+Requirement already satisfied: typeguard&lt;5,&gt;=3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ydata-profiling&gt;=4.3.1-&gt;pycaret[full]) (4.4.4)
+Collecting imagehash==4.3.1 (from ydata-profiling&gt;=4.3.1-&gt;pycaret[full])
+  Obtaining dependency information for imagehash==4.3.1 from https://files.pythonhosted.org/packages/2d/b4/19a746a986c6e38595fa5947c028b1b8e287773dcad766e648897ad2a4cf/ImageHash-4.3.1-py2.py3-none-any.whl.metadata
+  Using cached ImageHash-4.3.1-py2.py3-none-any.whl.metadata (8.0 kB)
+Collecting wordcloud&gt;=1.9.3 (from ydata-profiling&gt;=4.3.1-&gt;pycaret[full])
+  Obtaining dependency information for wordcloud&gt;=1.9.3 from https://files.pythonhosted.org/packages/00/09/abb305dce85911b8fba382926cfc57f2f257729e25937fdcc63f3a1a67f9/wordcloud-1.9.4-cp311-cp311-win_amd64.whl.metadata
+  Using cached wordcloud-1.9.4-cp311-cp311-win_amd64.whl.metadata (3.5 kB)
+Requirement already satisfied: dacite&gt;=1.8 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ydata-profiling&gt;=4.3.1-&gt;pycaret[full]) (1.9.2)
+Requirement already satisfied: PyWavelets in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from imagehash==4.3.1-&gt;ydata-profiling&gt;=4.3.1-&gt;pycaret[full]) (1.9.0)
+INFO: pip is looking at multiple versions of dash[testing] to determine which version is compatible with other requirements. This could take a while.
+Collecting dash[testing] (from pycaret[full])
+  Obtaining dependency information for dash[testing] from https://files.pythonhosted.org/packages/e1/df/267614cbc1003f6982d7078fd5c7591778f75e07bf36d4771fcb2eab8ff1/dash-3.1.1-py3-none-any.whl.metadata
+  Using cached dash-3.1.1-py3-none-any.whl.metadata (10 kB)
+  Obtaining dependency information for dash[testing] from https://files.pythonhosted.org/packages/d7/03/561820008b5187e22cf981c9fc9178d98fe16d699c9ff6bdf47ada123670/dash-3.1.0-py3-none-any.whl.metadata
+  Using cached dash-3.1.0-py3-none-any.whl.metadata (10 kB)
+  Obtaining dependency information for dash[testing] from https://files.pythonhosted.org/packages/0d/20/2e7ab37ea2ef1f8b2592a2615c8b3fb041ad51f32101061d8bc6465b8b40/dash-3.0.4-py3-none-any.whl.metadata
+  Using cached dash-3.0.4-py3-none-any.whl.metadata (10 kB)
+  Obtaining dependency information for dash[testing] from https://files.pythonhosted.org/packages/e8/62/4f7ed64d193fe8a3d13abe03694bd752ca3c34fce8b025af794585f3cc2a/dash-3.0.3-py3-none-any.whl.metadata
+  Using cached dash-3.0.3-py3-none-any.whl.metadata (10 kB)
+  Obtaining dependency information for dash[testing] from https://files.pythonhosted.org/packages/4e/52/a4d1320ab57402d0cbe7e70e3bad72524bb66b86973a0330b372f3ce47b2/dash-3.0.2-py3-none-any.whl.metadata
+  Using cached dash-3.0.2-py3-none-any.whl.metadata (10 kB)
+  Obtaining dependency information for dash[testing] from https://files.pythonhosted.org/packages/3f/a8/979f501f01a3bbc223c8b26b96db2b51bd45a8fc47de52e749aedeece7af/dash-3.0.1-py3-none-any.whl.metadata
+  Using cached dash-3.0.1-py3-none-any.whl.metadata (10 kB)
+  Obtaining dependency information for dash[testing] from https://files.pythonhosted.org/packages/0e/b1/4538ba05deedd430167bbee3ee1589276994e4a85c9e4d52f467080ecc33/dash-3.0.0-py3-none-any.whl.metadata
+  Using cached dash-3.0.0-py3-none-any.whl.metadata (10 kB)
+INFO: pip is still looking at multiple versions of dash[testing] to determine which version is compatible with other requirements. This could take a while.
+Requirement already satisfied: dash-html-components==2.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (2.0.0)
+Requirement already satisfied: dash-core-components==2.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (2.0.0)
+Requirement already satisfied: dash-table==5.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (5.0.0)
+Requirement already satisfied: retrying in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (1.4.2)
+Requirement already satisfied: nest-asyncio in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (1.6.0)
+Requirement already satisfied: beautifulsoup4&gt;=4.8.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (4.13.5)
+Requirement already satisfied: lxml&gt;=4.6.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (6.0.1)
+Collecting percy&gt;=2.0.2 (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for percy&gt;=2.0.2 from https://files.pythonhosted.org/packages/d6/39/528e689e21baa4d625cecc326c0d56c976d63855f9d114c07ccaed8a73eb/percy-2.0.2-py2.py3-none-any.whl.metadata
+  Using cached percy-2.0.2-py2.py3-none-any.whl.metadata (821 bytes)
+Collecting selenium&lt;=4.2.0,&gt;=3.141.0 (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for selenium&lt;=4.2.0,&gt;=3.141.0 from https://files.pythonhosted.org/packages/c9/0b/5ef429492faa5d951d8215918c7092de2dbc25cf895fdf46643260b22f92/selenium-4.2.0-py3-none-any.whl.metadata
+  Using cached selenium-4.2.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting multiprocess&gt;=0.70.12 (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for multiprocess&gt;=0.70.12 from https://files.pythonhosted.org/packages/4b/88/9039f2fed1012ef584751d4ceff9ab4a51e5ae264898f0b7cbf44340a859/multiprocess-0.70.18-py311-none-any.whl.metadata
+  Using cached multiprocess-0.70.18-py311-none-any.whl.metadata (7.5 kB)
+Requirement already satisfied: dash-testing-stub&gt;=0.0.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (0.0.2)
+INFO: pip is looking at multiple versions of fugue[dask] to determine which version is compatible with other requirements. This could take a while.
+Collecting fugue[dask] (from pycaret[full])
+  Obtaining dependency information for fugue[dask] from https://files.pythonhosted.org/packages/19/08/055cfc088df11c7d277b5a7a0bfbd3179597024897725c37c1f0831ca3ec/fugue-0.9.0-py3-none-any.whl.metadata
+  Using cached fugue-0.9.0-py3-none-any.whl.metadata (18 kB)
+Requirement already satisfied: Mako in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from alembic!=1.10.0,&lt;2-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (1.3.10)
+Requirement already satisfied: sniffio&gt;=1.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from anyio&lt;5.0,&gt;=3.0-&gt;gradio&gt;=3.50.2-&gt;pycaret[full]) (1.3.1)
+Requirement already satisfied: soupsieve&gt;1.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from beautifulsoup4&gt;=4.8.2-&gt;dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (2.8)
+Requirement already satisfied: simplejson&gt;=3.19.3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from choreographer&gt;=1.0.10-&gt;kaleido&gt;=0.2.1-&gt;pycaret[full]) (3.20.1)
+Requirement already satisfied: cffi&gt;=1.14 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from cryptography&gt;=43.0.1-&gt;evidently~=0.4.16-&gt;pycaret[full]) (2.0.0)
+INFO: pip is looking at multiple versions of dash-bootstrap-components to determine which version is compatible with other requirements. This could take a while.
+Collecting dash-bootstrap-components&lt;3,&gt;=1 (from explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for dash-bootstrap-components&lt;3,&gt;=1 from https://files.pythonhosted.org/packages/f7/f6/b4652aacfbc8d684c9ca8efc5178860a50b54abf82cd1960013c59f8258f/dash_bootstrap_components-2.0.3-py3-none-any.whl.metadata
+  Using cached dash_bootstrap_components-2.0.3-py3-none-any.whl.metadata (18 kB)
+  Obtaining dependency information for dash-bootstrap-components&lt;3,&gt;=1 from https://files.pythonhosted.org/packages/93/56/3f0b3c3247fab03f2bd4e2f85a79ef07c0f539915108685da9e94d7289d7/dash_bootstrap_components-2.0.2-py3-none-any.whl.metadata
+  Using cached dash_bootstrap_components-2.0.2-py3-none-any.whl.metadata (18 kB)
+  Obtaining dependency information for dash-bootstrap-components&lt;3,&gt;=1 from https://files.pythonhosted.org/packages/2e/3f/53d53cb3490d623b4ca56e152db0a495951fdc98ed044ca12138cfb527f9/dash_bootstrap_components-2.0.1-py3-none-any.whl.metadata
+  Using cached dash_bootstrap_components-2.0.1-py3-none-any.whl.metadata (18 kB)
+  Obtaining dependency information for dash-bootstrap-components&lt;3,&gt;=1 from https://files.pythonhosted.org/packages/f0/4c/8835f86877e2f8fce87acddea10677a9e5c035a8b11495a052a1a685c5a3/dash_bootstrap_components-2.0.0-py3-none-any.whl.metadata
+  Using cached dash_bootstrap_components-2.0.0-py3-none-any.whl.metadata (18 kB)
+  Obtaining dependency information for dash-bootstrap-components&lt;3,&gt;=1 from https://files.pythonhosted.org/packages/c3/87/4db3b56e9a6813d413a0f20e053aa163d652babb629a8bf7b871af4a075f/dash_bootstrap_components-1.7.1-py3-none-any.whl.metadata
+  Using cached dash_bootstrap_components-1.7.1-py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: pywin32&gt;=304 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from docker&lt;8,&gt;=4.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (311)
+Requirement already satisfied: colour in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from dtreeviz&gt;=2.1-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (0.1.5)
+Collecting authlib&gt;=1.5.2 (from fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for authlib&gt;=1.5.2 from https://files.pythonhosted.org/packages/0e/aa/91355b5f539caf1b94f0e66ff1e4ee39373b757fce08204981f7829ede51/authlib-1.6.4-py2.py3-none-any.whl.metadata
+  Using cached authlib-1.6.4-py2.py3-none-any.whl.metadata (9.8 kB)
+Collecting cyclopts&gt;=3.0.0 (from fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for cyclopts&gt;=3.0.0 from https://files.pythonhosted.org/packages/f0/8b/2c95f0645c6f40211896375e6fa51f504b8ccb29c21f6ae661fe87ab044e/cyclopts-3.24.0-py3-none-any.whl.metadata
+  Using cached cyclopts-3.24.0-py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: exceptiongroup&gt;=1.2.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (1.3.0)
+Collecting mcp&lt;2.0.0,&gt;=1.12.4 (from fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for mcp&lt;2.0.0,&gt;=1.12.4 from https://files.pythonhosted.org/packages/8e/11/d334fbb7c2aeddd2e762b86d7a619acffae012643a5738e698f975a2a9e2/mcp-1.14.1-py3-none-any.whl.metadata
+  Using cached mcp-1.14.1-py3-none-any.whl.metadata (75 kB)
+Collecting openapi-core&gt;=0.19.5 (from fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for openapi-core&gt;=0.19.5 from https://files.pythonhosted.org/packages/27/6f/83ead0e2e30a90445ee4fc0135f43741aebc30cca5b43f20968b603e30b6/openapi_core-0.19.5-py3-none-any.whl.metadata
+  Using cached openapi_core-0.19.5-py3-none-any.whl.metadata (6.6 kB)
+Collecting openapi-pydantic&gt;=0.5.1 (from fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for openapi-pydantic&gt;=0.5.1 from https://files.pythonhosted.org/packages/12/cf/03675d8bd8ecbf4445504d8071adab19f5f993676795708e36402ab38263/openapi_pydantic-0.5.1-py3-none-any.whl.metadata
+  Using cached openapi_pydantic-0.5.1-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: pyperclip&gt;=1.9.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (1.10.0)
+Requirement already satisfied: wtforms in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from flask-wtf&gt;=1.1-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (3.2.1)
+Requirement already satisfied: antlr4-python3-runtime&lt;4.12 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from fugue-sql-antlr&gt;=0.1.6-&gt;fugue~=0.8.0-&gt;pycaret[full]) (4.11.1)
+Requirement already satisfied: graphql-core&lt;3.3,&gt;=3.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from graphene&lt;4-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (3.2.6)
+Collecting graphql-relay&lt;3.3,&gt;=3.1 (from graphene&lt;4-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for graphql-relay&lt;3.3,&gt;=3.1 from https://files.pythonhosted.org/packages/74/16/a4cf06adbc711bd364a73ce043b0b08d8fa5aae3df11b6ee4248bcdad2e0/graphql_relay-3.2.0-py3-none-any.whl.metadata
+  Using cached graphql_relay-3.2.0-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: httpcore==1.* in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from httpx&lt;1.0,&gt;=0.24.1-&gt;gradio&gt;=3.50.2-&gt;pycaret[full]) (1.0.9)
+Requirement already satisfied: filelock in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from huggingface-hub&lt;1.0,&gt;=0.33.5-&gt;gradio&gt;=3.50.2-&gt;pycaret[full]) (3.19.1)
+Requirement already satisfied: appdirs in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from iterative-telemetry&gt;=0.0.5-&gt;evidently~=0.4.16-&gt;pycaret[full]) (1.4.4)
+Requirement already satisfied: distro in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from iterative-telemetry&gt;=0.0.5-&gt;evidently~=0.4.16-&gt;pycaret[full]) (1.9.0)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.4 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from jedi&gt;=0.16-&gt;ipython&gt;=5.5.0-&gt;pycaret[full]) (0.8.5)
+Requirement already satisfied: attrs&gt;=22.2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret[full]) (25.3.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret[full]) (2025.4.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret[full]) (0.36.2)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;pycaret[full]) (0.27.1)
+Requirement already satisfied: platformdirs&gt;=2.5 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from jupyter-core!=5.0.*,&gt;=4.12-&gt;nbformat&gt;=4.2.0-&gt;pycaret[full]) (4.4.0)
+Requirement already satisfied: ansi2html in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from jupyter-dash&gt;=0.4.1-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (1.9.2)
+Requirement already satisfied: litestar-htmx&gt;=0.4.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from litestar&gt;=2.8.3-&gt;evidently~=0.4.16-&gt;pycaret[full]) (0.5.0)
+Requirement already satisfied: msgspec&gt;=0.18.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from litestar&gt;=2.8.3-&gt;evidently~=0.4.16-&gt;pycaret[full]) (0.19.0)
+Requirement already satisfied: multidict&gt;=6.0.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from litestar&gt;=2.8.3-&gt;evidently~=0.4.16-&gt;pycaret[full]) (6.6.4)
+Requirement already satisfied: multipart&gt;=1.2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from litestar&gt;=2.8.3-&gt;evidently~=0.4.16-&gt;pycaret[full]) (1.3.0)
+Requirement already satisfied: polyfactory&gt;=2.6.3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from litestar&gt;=2.8.3-&gt;evidently~=0.4.16-&gt;pycaret[full]) (2.22.2)
+Collecting rich-click (from litestar&gt;=2.8.3-&gt;evidently~=0.4.16-&gt;pycaret[full])
+  Obtaining dependency information for rich-click from https://files.pythonhosted.org/packages/a8/77/e9144dcf68a0b3f3f4386986f97255c3d9f7c659be58bb7a5fe8f26f3efa/rich_click-1.9.1-py3-none-any.whl.metadata
+  Using cached rich_click-1.9.1-py3-none-any.whl.metadata (8.6 kB)
+Requirement already satisfied: regex&gt;=2021.8.3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from nltk&gt;=3.6.7-&gt;evidently~=0.4.16-&gt;pycaret[full]) (2025.9.18)
+Requirement already satisfied: wcwidth in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from prompt_toolkit&lt;3.1.0,&gt;=3.0.41-&gt;ipython&gt;=5.5.0-&gt;pycaret[full]) (0.2.13)
+Requirement already satisfied: annotated-types&gt;=0.6.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pydantic&gt;=1.10.13-&gt;evidently~=0.4.16-&gt;pycaret[full]) (0.7.0)
+Requirement already satisfied: pydantic-core==2.33.2 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pydantic&gt;=1.10.13-&gt;evidently~=0.4.16-&gt;pycaret[full]) (2.33.2)
+Requirement already satisfied: typing-inspection&gt;=0.4.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pydantic&gt;=1.10.13-&gt;evidently~=0.4.16-&gt;pycaret[full]) (0.4.1)
+Requirement already satisfied: markdown-it-py&gt;=2.2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from rich&gt;=13-&gt;evidently~=0.4.16-&gt;pycaret[full]) (3.0.0)
+Requirement already satisfied: trio~=0.17 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from selenium&lt;=4.2.0,&gt;=3.141.0-&gt;dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (0.31.0)
+Collecting trio-websocket~=0.9 (from selenium&lt;=4.2.0,&gt;=3.141.0-&gt;dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full])
+  Obtaining dependency information for trio-websocket~=0.9 from https://files.pythonhosted.org/packages/c7/19/eb640a397bba49ba49ef9dbe2e7e5c04202ba045b6ce2ec36e9cadc51e04/trio_websocket-0.12.2-py3-none-any.whl.metadata
+  Using cached trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting fs (from triad&gt;=0.9.3-&gt;fugue~=0.8.0-&gt;pycaret[full])
+  Obtaining dependency information for fs from https://files.pythonhosted.org/packages/b9/5c/a3d95dc1ec6cdeb032d789b552ecc76effa3557ea9186e1566df6aac18df/fs-2.4.16-py2.py3-none-any.whl.metadata
+  Using cached fs-2.4.16-py2.py3-none-any.whl.metadata (6.3 kB)
+Requirement already satisfied: shellingham&gt;=1.3.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from typer&gt;=0.3-&gt;evidently~=0.4.16-&gt;pycaret[full]) (1.5.4)
+Requirement already satisfied: mypy-extensions&gt;=0.3.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from typing-inspect&gt;=0.9.0-&gt;evidently~=0.4.16-&gt;pycaret[full]) (1.1.0)
+Requirement already satisfied: httptools&gt;=0.6.3 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from uvicorn&gt;=0.17.6-&gt;pycaret[full]) (0.6.4)
+Requirement already satisfied: watchfiles&gt;=0.13 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from uvicorn&gt;=0.17.6-&gt;pycaret[full]) (1.1.0)
+Requirement already satisfied: puremagic in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from visions[type_image_path]&lt;0.8.2,&gt;=0.7.5-&gt;ydata-profiling&gt;=4.3.1-&gt;pycaret[full]) (1.30)
+Requirement already satisfied: executing&gt;=1.2.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from stack_data-&gt;ipython&gt;=5.5.0-&gt;pycaret[full]) (2.2.1)
+Requirement already satisfied: asttokens&gt;=2.1.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from stack_data-&gt;ipython&gt;=5.5.0-&gt;pycaret[full]) (3.0.0)
+Requirement already satisfied: pure-eval in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from stack_data-&gt;ipython&gt;=5.5.0-&gt;pycaret[full]) (0.2.3)
+Requirement already satisfied: pycparser in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from cffi&gt;=1.14-&gt;cryptography&gt;=43.0.1-&gt;evidently~=0.4.16-&gt;pycaret[full]) (2.23)
+Requirement already satisfied: docstring-parser&gt;=0.15 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from cyclopts&gt;=3.0.0-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (0.17.0)
+Collecting rich-rst&lt;2.0.0,&gt;=1.3.1 (from cyclopts&gt;=3.0.0-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for rich-rst&lt;2.0.0,&gt;=1.3.1 from https://files.pythonhosted.org/packages/fd/bc/cc4e3dbc5e7992398dcb7a8eda0cbcf4fb792a0cdb93f857b478bf3cf884/rich_rst-1.3.1-py3-none-any.whl.metadata
+  Using cached rich_rst-1.3.1-py3-none-any.whl.metadata (6.0 kB)
+Collecting google-auth~=2.0 (from databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for google-auth~=2.0 from https://files.pythonhosted.org/packages/17/63/b19553b658a1692443c62bd07e5868adaa0ad746a0751ba62c59568cd45b/google_auth-2.40.3-py2.py3-none-any.whl.metadata
+  Using cached google_auth-2.40.3-py2.py3-none-any.whl.metadata (6.2 kB)
+Requirement already satisfied: zope.event in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gevent&gt;=1.3.6-&gt;interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full]) (6.0)
+Requirement already satisfied: zope.interface in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gevent&gt;=1.3.6-&gt;interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full]) (8.0)
+Requirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gitpython&lt;4,&gt;=3.1.9-&gt;mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (4.0.12)
+Requirement already satisfied: debugpy&gt;=1.6.5 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipykernel&gt;=4.10.0-&gt;interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full]) (1.8.17)
+Requirement already satisfied: jupyter-client&gt;=8.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipykernel&gt;=4.10.0-&gt;interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full]) (8.6.3)
+Requirement already satisfied: pyzmq&gt;=25 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from ipykernel&gt;=4.10.0-&gt;interpret-core[aplr,dash,debug,linear,notebook,plotly,sensitivity,shap]==0.7.2-&gt;interpret&gt;=0.2.7-&gt;pycaret[full]) (27.1.0)
+Requirement already satisfied: mdurl~=0.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from markdown-it-py&gt;=2.2.0-&gt;rich&gt;=13-&gt;evidently~=0.4.16-&gt;pycaret[full]) (0.1.2)
+Requirement already satisfied: httpx-sse&gt;=0.4 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from mcp&lt;2.0.0,&gt;=1.12.4-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (0.4.1)
+Collecting pydantic-settings&gt;=2.5.2 (from mcp&lt;2.0.0,&gt;=1.12.4-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for pydantic-settings&gt;=2.5.2 from https://files.pythonhosted.org/packages/58/f0/427018098906416f580e3cf1366d3b1abfb408a0652e9f31600c24a1903c/pydantic_settings-2.10.1-py3-none-any.whl.metadata
+  Using cached pydantic_settings-2.10.1-py3-none-any.whl.metadata (3.4 kB)
+Requirement already satisfied: sse-starlette&gt;=1.6.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from mcp&lt;2.0.0,&gt;=1.12.4-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (3.0.2)
+Requirement already satisfied: isodate in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from openapi-core&gt;=0.19.5-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (0.7.2)
+Collecting jsonschema-path&lt;0.4.0,&gt;=0.3.1 (from openapi-core&gt;=0.19.5-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for jsonschema-path&lt;0.4.0,&gt;=0.3.1 from https://files.pythonhosted.org/packages/cb/58/3485da8cb93d2f393bce453adeef16896751f14ba3e2024bc21dc9597646/jsonschema_path-0.3.4-py3-none-any.whl.metadata
+  Using cached jsonschema_path-0.3.4-py3-none-any.whl.metadata (4.3 kB)
+Requirement already satisfied: more-itertools in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from openapi-core&gt;=0.19.5-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (10.8.0)
+Collecting openapi-schema-validator&lt;0.7.0,&gt;=0.6.0 (from openapi-core&gt;=0.19.5-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for openapi-schema-validator&lt;0.7.0,&gt;=0.6.0 from https://files.pythonhosted.org/packages/21/c6/ad0fba32775ae749016829dace42ed80f4407b171da41313d1a3a5f102e4/openapi_schema_validator-0.6.3-py3-none-any.whl.metadata
+  Using cached openapi_schema_validator-0.6.3-py3-none-any.whl.metadata (5.4 kB)
+Collecting openapi-spec-validator&lt;0.8.0,&gt;=0.7.1 (from openapi-core&gt;=0.19.5-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for openapi-spec-validator&lt;0.8.0,&gt;=0.7.1 from https://files.pythonhosted.org/packages/27/dd/b3fd642260cb17532f66cc1e8250f3507d1e580483e209dc1e9d13bd980d/openapi_spec_validator-0.7.2-py3-none-any.whl.metadata
+  Using cached openapi_spec_validator-0.7.2-py3-none-any.whl.metadata (5.7 kB)
+Requirement already satisfied: parse in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from openapi-core&gt;=0.19.5-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (1.20.2)
+Collecting opentelemetry-semantic-conventions==0.58b0 (from opentelemetry-sdk&lt;3,&gt;=1.9.0-&gt;mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full])
+  Obtaining dependency information for opentelemetry-semantic-conventions==0.58b0 from https://files.pythonhosted.org/packages/07/90/68152b7465f50285d3ce2481b3aec2f82822e3f52e5152eeeaf516bab841/opentelemetry_semantic_conventions-0.58b0-py3-none-any.whl.metadata
+  Using cached opentelemetry_semantic_conventions-0.58b0-py3-none-any.whl.metadata (2.4 kB)
+Requirement already satisfied: faker&gt;=5.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from polyfactory&gt;=2.6.3-&gt;litestar&gt;=2.8.3-&gt;evidently~=0.4.16-&gt;pycaret[full]) (37.8.0)
+Collecting email-validator&gt;=2.0.0 (from pydantic&gt;=1.10.13-&gt;evidently~=0.4.16-&gt;pycaret[full])
+  Obtaining dependency information for email-validator&gt;=2.0.0 from https://files.pythonhosted.org/packages/de/15/545e2b6cf2e3be84bc1ed85613edd75b8aea69807a71c26f4ca6a9258e82/email_validator-2.3.0-py3-none-any.whl.metadata
+  Using cached email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+Requirement already satisfied: outcome in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from trio~=0.17-&gt;selenium&lt;=4.2.0,&gt;=3.141.0-&gt;dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (1.3.0.post0)
+Requirement already satisfied: wsproto&gt;=0.14 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from trio-websocket~=0.9-&gt;selenium&lt;=4.2.0,&gt;=3.141.0-&gt;dash&lt;3,&gt;=2.10-&gt;explainerdashboard&gt;=0.3.8-&gt;pycaret[full]) (1.2.0)
+Collecting pyOpenSSL&gt;=0.14 (from urllib3&gt;=1.26.5-&gt;distributed&gt;=2024.4.1-&gt;pycaret[full])
+  Obtaining dependency information for pyOpenSSL&gt;=0.14 from https://files.pythonhosted.org/packages/d1/81/ef2b1dfd1862567d573a4fdbc9f969067621764fbb74338496840a1d2977/pyopenssl-25.3.0-py3-none-any.whl.metadata
+  Using cached pyopenssl-25.3.0-py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: urllib3-secure-extra in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from urllib3&gt;=1.26.5-&gt;distributed&gt;=2024.4.1-&gt;pycaret[full]) (0.1.0)
+Requirement already satisfied: PySocks!=1.5.7,&lt;2.0,&gt;=1.5.6 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from urllib3&gt;=1.26.5-&gt;distributed&gt;=2024.4.1-&gt;pycaret[full]) (1.7.1)
+Requirement already satisfied: dnspython&gt;=2.0.0 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from email-validator&gt;=2.0.0-&gt;pydantic&gt;=1.10.13-&gt;evidently~=0.4.16-&gt;pycaret[full]) (2.8.0)
+Requirement already satisfied: smmap&lt;6,&gt;=3.0.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;gitpython&lt;4,&gt;=3.1.9-&gt;mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (5.0.2)
+Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (0.4.2)
+Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (4.9.1)
+Requirement already satisfied: pathable&lt;0.5.0,&gt;=0.4.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from jsonschema-path&lt;0.4.0,&gt;=0.3.1-&gt;openapi-core&gt;=0.19.5-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (0.4.4)
+Requirement already satisfied: rfc3339-validator in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from openapi-schema-validator&lt;0.7.0,&gt;=0.6.0-&gt;openapi-core&gt;=0.19.5-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (0.1.4)
+Requirement already satisfied: lazy-object-proxy&lt;2.0.0,&gt;=1.7.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from openapi-spec-validator&lt;0.8.0,&gt;=0.7.1-&gt;openapi-core&gt;=0.19.5-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (1.12.0)
+Requirement already satisfied: docutils in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from rich-rst&lt;2.0.0,&gt;=1.3.1-&gt;cyclopts&gt;=3.0.0-&gt;fastmcp&lt;3,&gt;=2.0.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (0.21.2)
+Requirement already satisfied: pyasn1&lt;0.7.0,&gt;=0.6.1 in c:\users\user\appdata\local\programs\python\python311\lib\site-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth~=2.0-&gt;databricks-sdk&lt;1,&gt;=0.20.0-&gt;mlflow-skinny==3.4.0-&gt;mlflow&gt;=2.0.0-&gt;pycaret[full]) (0.6.1)
+Using cached fairlearn-0.7.0-py3-none-any.whl (177 kB)
+Using cached boto3-1.40.35-py3-none-any.whl (139 kB)
+Using cached catboost-1.2.8-cp311-cp311-win_amd64.whl (102.5 MB)
+Using cached dask-2025.9.1-py3-none-any.whl (1.5 MB)
+Using cached distributed-2025.9.1-py3-none-any.whl (1.0 MB)
+Using cached evidently-0.4.40-py3-none-any.whl (3.5 MB)
+Using cached explainerdashboard-0.5.1-py3-none-any.whl (355 kB)
+Using cached fugue-0.8.7-py3-none-any.whl (279 kB)
+Using cached gradio-5.46.1-py3-none-any.whl (60.4 MB)
+Using cached gradio_client-1.13.1-py3-none-any.whl (325 kB)
+Using cached fastapi-0.117.1-py3-none-any.whl (95 kB)
+Using cached hyperopt-0.2.7-py2.py3-none-any.whl (1.6 MB)
+Using cached interpret-0.7.2-py3-none-any.whl (1.4 kB)
+Using cached kmodes-0.12.2-py2.py3-none-any.whl (20 kB)
+Using cached mlflow-3.4.0-py3-none-any.whl (26.7 MB)
+Using cached mlflow_skinny-3.4.0-py3-none-any.whl (2.2 MB)
+Using cached mlflow_tracing-3.4.0-py3-none-any.whl (1.2 MB)
+Using cached flask-2.3.3-py3-none-any.whl (96 kB)
+Using cached mlxtend-0.23.4-py3-none-any.whl (1.4 MB)
+Using cached moto-4.2.14-py2.py3-none-any.whl (3.3 MB)
+Using cached optuna-4.5.0-py3-none-any.whl (400 kB)
+Using cached scikit_learn_intelex-2025.8.0-py311-none-win_amd64.whl (3.1 MB)
+Using cached daal-2025.8.0-py2.py3-none-win_amd64.whl (82.2 MB)
+Using cached scikit_optimize-0.10.2-py2.py3-none-any.whl (107 kB)
+Using cached shap-0.44.1-cp311-cp311-win_amd64.whl (450 kB)
+Using cached statsforecast-1.5.0-py3-none-any.whl (99 kB)
+Using cached umap_learn-0.5.7-py3-none-any.whl (88 kB)
+Using cached ydata_profiling-4.16.1-py2.py3-none-any.whl (400 kB)
+Using cached ImageHash-4.3.1-py2.py3-none-any.whl (296 kB)
+Using cached optuna_integration-4.5.0-py3-none-any.whl (99 kB)
+Using cached adagio-0.2.6-py3-none-any.whl (19 kB)
+Using cached alembic-1.16.5-py3-none-any.whl (247 kB)
+Using cached botocore-1.40.35-py3-none-any.whl (14.0 MB)
+Using cached cryptography-45.0.7-cp311-abi3-win_amd64.whl (3.4 MB)
+Using cached dash-2.18.2-py3-none-any.whl (7.8 MB)
+Using cached dash_bootstrap_components-1.7.1-py3-none-any.whl (229 kB)
+Using cached docker-7.1.0-py3-none-any.whl (147 kB)
+Using cached dtreeviz-2.2.2-py3-none-any.whl (91 kB)
+Using cached fastmcp-2.12.3-py3-none-any.whl (314 kB)
+Using cached flask_wtf-1.2.2-py3-none-any.whl (12 kB)
+Using cached graphene-3.4.3-py2.py3-none-any.whl (114 kB)
+Using cached huggingface_hub-0.35.0-py3-none-any.whl (563 kB)
+Using cached iterative_telemetry-0.0.10-py3-none-any.whl (10 kB)
+Using cached jupyter_dash-0.4.2-py3-none-any.whl (23 kB)
+Using cached litestar-2.17.0-py3-none-any.whl (564 kB)
+Using cached llvmlite-0.44.0-cp311-cp311-win_amd64.whl (30.3 MB)
+Using cached multiprocess-0.70.18-py311-none-any.whl (144 kB)
+Using cached nltk-3.9.1-py3-none-any.whl (1.5 MB)
+Using cached percy-2.0.2-py2.py3-none-any.whl (12 kB)
+Using cached phik-0.12.5-cp311-cp311-win_amd64.whl (675 kB)
+Using cached pynndescent-0.5.13-py3-none-any.whl (56 kB)
+Using cached qpd-0.4.4-py3-none-any.whl (169 kB)
+Using cached responses-0.25.8-py3-none-any.whl (34 kB)
+Using cached s3transfer-0.14.0-py3-none-any.whl (85 kB)
+Using cached safehttpx-0.1.6-py3-none-any.whl (8.7 kB)
+Using cached seaborn-0.13.2-py3-none-any.whl (294 kB)
+Using cached selenium-4.2.0-py3-none-any.whl (983 kB)
+Using cached triad-0.9.8-py3-none-any.whl (62 kB)
+Using cached typer-0.19.1-py3-none-any.whl (46 kB)
+Using cached wordcloud-1.9.4-cp311-cp311-win_amd64.whl (299 kB)
+Using cached dash_auth-2.3.0-py3-none-any.whl (14 kB)
+Using cached flask_simplelogin-0.2.0-py3-none-any.whl (7.3 kB)
+Using cached authlib-1.6.4-py2.py3-none-any.whl (243 kB)
+Using cached cyclopts-3.24.0-py3-none-any.whl (86 kB)
+Using cached databricks_sdk-0.65.0-py3-none-any.whl (705 kB)
+Using cached gevent-25.9.1-cp311-cp311-win_amd64.whl (1.7 MB)
+Using cached graphql_relay-3.2.0-py3-none-any.whl (16 kB)
+Using cached mcp-1.14.1-py3-none-any.whl (163 kB)
+Using cached openapi_core-0.19.5-py3-none-any.whl (106 kB)
+Using cached openapi_pydantic-0.5.1-py3-none-any.whl (96 kB)
+Using cached opentelemetry_sdk-1.37.0-py3-none-any.whl (131 kB)
+Using cached opentelemetry_semantic_conventions-0.58b0-py3-none-any.whl (207 kB)
+Using cached salib-1.5.1-py3-none-any.whl (778 kB)
+Using cached trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+Using cached fs-2.4.16-py2.py3-none-any.whl (135 kB)
+Using cached interpret_core-0.7.2-py3-none-any.whl (16.5 MB)
+Using cached rich_click-1.9.1-py3-none-any.whl (69 kB)
+Using cached visions-0.8.1-py3-none-any.whl (105 kB)
+Using cached email_validator-2.3.0-py3-none-any.whl (35 kB)
+Using cached google_auth-2.40.3-py2.py3-none-any.whl (216 kB)
+Using cached jsonschema_path-0.3.4-py3-none-any.whl (14 kB)
+Using cached openapi_schema_validator-0.6.3-py3-none-any.whl (8.8 kB)
+Using cached openapi_spec_validator-0.7.2-py3-none-any.whl (39 kB)
+Using cached pydantic_settings-2.10.1-py3-none-any.whl (45 kB)
+Using cached pyopenssl-25.3.0-py3-none-any.whl (57 kB)
+Using cached rich_rst-1.3.1-py3-none-any.whl (11 kB)
+Installing collected packages: multiprocess, llvmlite, graphql-relay, fs, email-validator, responses, percy, nltk, jsonschema-path, iterative-telemetry, imagehash, hyperopt, huggingface-hub, graphene, google-auth, gevent, flask, docker, dask, daal, cryptography, botocore, alembic, wordcloud, visions, typer, trio-websocket, triad, shap, seaborn, scikit-optimize, scikit-learn-intelex, SALib, safehttpx, s3transfer, rich-rst, rich-click, pyOpenSSL, pynndescent, pydantic-settings, phik, optuna, opentelemetry-semantic-conventions, openapi-pydantic, mlxtend, kmodes, interpret-core, gradio-client, flask-wtf, fastapi, fairlearn, dtreeviz, distributed, databricks-sdk, dash, catboost, authlib, umap-learn, optuna-integration, opentelemetry-sdk, openapi-schema-validator, mcp, litestar, jupyter-dash, gradio, fugue-sql-antlr, flask-simplelogin, dash-cytoscape, dash-bootstrap-components, dash-auth, cyclopts, boto3, adagio, ydata-profiling, selenium, qpd, openapi-spec-validator, moto, mlflow-tracing, mlflow-skinny, explainerdashboard, evidently, openapi-core, interpret, fugue, statsforecast, fastmcp, mlflow
+  Attempting uninstall: llvmlite
+    Found existing installation: llvmlite 0.45.0
+    Uninstalling llvmlite-0.45.0:
+      Successfully uninstalled llvmlite-0.45.0
+  Attempting uninstall: flask
+    Found existing installation: Flask 3.1.2
+    Uninstalling Flask-3.1.2:
+      Successfully uninstalled Flask-3.1.2
+  Attempting uninstall: dash
+    Found existing installation: dash 3.2.0
+    Uninstalling dash-3.2.0:
+      Successfully uninstalled dash-3.2.0
+Successfully installed SALib-1.5.1 adagio-0.2.6 alembic-1.16.5 authlib-1.6.4 boto3-1.40.35 botocore-1.40.35 catboost-1.2.8 cryptography-45.0.7 cyclopts-3.24.0 daal-2025.8.0 dash-2.18.2 dash-auth-2.3.0 dash-bootstrap-components-1.7.1 dash-cytoscape-1.0.2 dask-2025.9.1 databricks-sdk-0.65.0 distributed-2025.9.1 docker-7.1.0 dtreeviz-2.2.2 email-validator-2.3.0 evidently-0.4.40 explainerdashboard-0.5.1 fairlearn-0.7.0 fastapi-0.117.1 fastmcp-2.12.3 flask-2.3.3 flask-simplelogin-0.2.0 flask-wtf-1.2.2 fs-2.4.16 fugue-0.8.7 fugue-sql-antlr-0.2.2 gevent-25.9.1 google-auth-2.40.3 gradio-5.46.1 gradio-client-1.13.1 graphene-3.4.3 graphql-relay-3.2.0 huggingface-hub-0.35.0 hyperopt-0.2.7 imagehash-4.3.1 interpret-0.7.2 interpret-core-0.7.2 iterative-telemetry-0.0.10 jsonschema-path-0.3.4 jupyter-dash-0.4.2 kmodes-0.12.2 litestar-2.17.0 llvmlite-0.44.0 mcp-1.14.1 mlflow-3.4.0 mlflow-skinny-3.4.0 mlflow-tracing-3.4.0 mlxtend-0.23.4 moto-4.2.14 multiprocess-0.70.18 nltk-3.9.1 openapi-core-0.19.5 openapi-pydantic-0.5.1 openapi-schema-validator-0.6.3 openapi-spec-validator-0.7.2 opentelemetry-sdk-1.37.0 opentelemetry-semantic-conventions-0.58b0 optuna-4.5.0 optuna-integration-4.5.0 percy-2.0.2 phik-0.12.5 pyOpenSSL-25.3.0 pydantic-settings-2.10.1 pynndescent-0.5.13 qpd-0.4.4 responses-0.25.8 rich-click-1.9.1 rich-rst-1.3.1 s3transfer-0.14.0 safehttpx-0.1.6 scikit-learn-intelex-2025.8.0 scikit-optimize-0.10.2 seaborn-0.13.2 selenium-4.2.0 shap-0.44.1 statsforecast-1.5.0 triad-0.9.8 trio-websocket-0.12.2 typer-0.19.1 umap-learn-0.5.7 visions-0.8.1 wordcloud-1.9.4 ydata-profiling-4.16.1
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: visions 0.8.1 does not provide the extra &#39;type_image_path&#39;
+
+[notice] A new release of pip is available: 23.2.1 -&gt; 25.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-library-dan-koneksi-ke-database-postgresql">
+<h2>Import Library dan Koneksi ke Database PostgreSQL<a class="headerlink" href="#import-library-dan-koneksi-ke-database-postgresql" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sqlalchemy</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># --- GANTI DENGAN DETAIL DATABASE ANDA ---</span>
+<span class="n">db_user</span> <span class="o">=</span> <span class="s1">&#39;postgres&#39;</span>
+<span class="n">db_password</span> <span class="o">=</span> <span class="s1">&#39;123456789&#39;</span>
+<span class="n">db_host</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>  <span class="c1"># atau alamat IP server database Anda</span>
+<span class="n">db_port</span> <span class="o">=</span> <span class="s1">&#39;5432&#39;</span>
+<span class="n">db_name</span> <span class="o">=</span> <span class="s1">&#39;iris_data&#39;</span>
+<span class="n">table_name</span> <span class="o">=</span> <span class="s1">&#39;iris_data&#39;</span>
+<span class="c1"># -----------------------------------------</span>
+
+<span class="c1"># Membuat koneksi string untuk SQLAlchemy</span>
+<span class="n">db_uri</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;postgresql+psycopg2://</span><span class="si">{</span><span class="n">db_user</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">db_password</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">db_host</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">db_port</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">db_name</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Memuat data dari PostgreSQL ke dalam DataFrame pandas</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menghubungkan ke database...&quot;</span><span class="p">)</span>
+    <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">db_uri</span><span class="p">)</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;SELECT * FROM </span><span class="si">{</span><span class="n">table_name</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil dimuat!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Berikut adalah 5 baris pertama dari data Anda:&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Terjadi kesalahan saat menghubungkan atau mengambil data: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Menghubungkan ke database...
+Data berhasil dimuat!
+Berikut adalah 5 baris pertama dari data Anda:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>Class</th>
+      <th>sepal length</th>
+      <th>sepal width</th>
+      <th>petal length</th>
+      <th>petal width</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Iris-setosa</td>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Iris-setosa</td>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Iris-setosa</td>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Iris-setosa</td>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Iris-setosa</td>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="setup-environment-pycaret-untuk-deteksi-anomali">
+<h2>Setup Environment PyCaret untuk Deteksi Anomali<a class="headerlink" href="#setup-environment-pycaret-untuk-deteksi-anomali" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pycaret.anomaly</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Inisialisasi environment PyCaret untuk deteksi anomali</span>
+<span class="c1"># Ganti &#39;silent=True&#39; dengan &#39;verbose=False&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menyiapkan environment PyCaret untuk deteksi anomali...&quot;</span><span class="p">)</span>
+<span class="n">anomaly_setup</span> <span class="o">=</span> <span class="n">setup</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">session_id</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setup selesai.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Menyiapkan environment PyCaret untuk deteksi anomali...
+Setup selesai.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuat-model-deteksi-outlier-knn">
+<h2>Membuat Model Deteksi Outlier KNN<a class="headerlink" href="#membuat-model-deteksi-outlier-knn" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat model K-Nearest Neighbors (KNN) untuk deteksi outlier</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Membuat model KNN...&quot;</span><span class="p">)</span>
+<span class="n">knn_model</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">(</span><span class="s1">&#39;knn&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model KNN berhasil dibuat:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">knn_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Membuat model KNN...
+</pre></div>
+</div>
+<div class="output text_html"></div><div class="output text_html"></div><div class="output text_html"></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model KNN berhasil dibuat:
+KNN(algorithm=&#39;auto&#39;, contamination=0.05, leaf_size=30, method=&#39;largest&#39;,
+  metric=&#39;minkowski&#39;, metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="memberi-label-outlier-pada-data">
+<h2>Memberi Label Outlier pada Data<a class="headerlink" href="#memberi-label-outlier-pada-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menggunakan model untuk melabeli data</span>
+<span class="n">results_anomaly</span> <span class="o">=</span> <span class="n">assign_model</span><span class="p">(</span><span class="n">knn_model</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data setelah diberi label outlier:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">results_anomaly</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Menghitung jumlah inlier dan outlier yang ditemukan</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah Inlier (0) dan Outlier (1):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results_anomaly</span><span class="p">[</span><span class="s1">&#39;Anomaly&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data setelah diberi label outlier:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>Class</th>
+      <th>sepal length</th>
+      <th>sepal width</th>
+      <th>petal length</th>
+      <th>petal width</th>
+      <th>Anomaly</th>
+      <th>Anomaly_Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Iris-setosa</td>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>1</td>
+      <td>5.037857</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Iris-setosa</td>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>1</td>
+      <td>4.146083</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Iris-setosa</td>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>0</td>
+      <td>3.190611</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Iris-setosa</td>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>0</td>
+      <td>3.018278</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Iris-setosa</td>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>0</td>
+      <td>3.008322</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah Inlier (0) dan Outlier (1):
+Anomaly
+0    142
+1      8
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualisasi-hasil-deteksi-outlier">
+<h2>Visualisasi Hasil Deteksi Outlier<a class="headerlink" href="#visualisasi-hasil-deteksi-outlier" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">LocalOutlierFactor</span> <span class="c1"># Model deteksi outlier yang mirip KNN</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.manifold</span><span class="w"> </span><span class="kn">import</span> <span class="n">TSNE</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_blobs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Langkah 1: Mempersiapkan Data dan Model ---</span>
+
+<span class="c1"># Membuat data contoh: 300 titik data normal dan 20 titik outlier</span>
+<span class="c1"># &#39;make_blobs&#39; membuat gerombolan data yang bagus untuk visualisasi</span>
+<span class="n">X_normal</span><span class="p">,</span> <span class="n">y_normal</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Menambahkan beberapa titik outlier yang jauh dari gerombolan utama</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_outliers</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">10</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Menggabungkan data normal dan outlier</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">X_normal</span><span class="p">,</span> <span class="n">X_outliers</span><span class="p">])</span>
+<span class="c1"># Membuat label: 0 untuk data normal (inlier), 1 untuk data aneh (outlier)</span>
+<span class="c1"># Ini adalah &quot;jawaban&quot; yang sebenarnya, kita akan lihat apakah model bisa menemukannya</span>
+<span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_normal</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_outliers</span><span class="p">))])</span>
+
+<span class="c1"># Normalisasi data sangat direkomendasikan sebelum t-SNE dan model outlier</span>
+<span class="n">X_scaled</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Membuat dan melatih model deteksi outlier (mirip dengan model KNN Anda)</span>
+<span class="c1"># &#39;LocalOutlierFactor&#39; bekerja dengan membandingkan kepadatan lokal suatu titik dengan tetangganya</span>
+<span class="n">lof_model</span> <span class="o">=</span> <span class="n">LocalOutlierFactor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">contamination</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1"># Asumsi 10% data adalah outlier</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">lof_model</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">)</span>
+
+<span class="c1"># Mengubah hasil prediksi menjadi format yang lebih mudah dibaca</span>
+<span class="c1"># Model ini memberi label -1 untuk outlier dan 1 untuk inlier, kita ubah ke 1 dan 0</span>
+<span class="n">outlier_labels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Langkah 2: Menjalankan t-SNE ---</span>
+
+<span class="c1"># t-SNE akan mengubah data kita dari banyak fitur menjadi hanya 2 (koordinat x dan y)</span>
+<span class="n">tsne</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">perplexity</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">X_tsne</span> <span class="o">=</span> <span class="n">tsne</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">)</span>
+
+<span class="c1"># Menggabungkan hasil t-SNE dengan label outlier ke dalam satu DataFrame</span>
+<span class="n">df_tsne</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_tsne</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_tsne&#39;</span><span class="p">,</span> <span class="s1">&#39;y_tsne&#39;</span><span class="p">])</span>
+<span class="n">df_tsne</span><span class="p">[</span><span class="s1">&#39;Status&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">outlier_labels</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;Outlier (Terdeteksi)&#39;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;Normal&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Langkah 3: Membuat Visualisasi yang Lebih Mudah Dipahami ---</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-v0_8-whitegrid&#39;</span><span class="p">)</span> <span class="c1"># Menggunakan style plot yang bagus</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span> <span class="c1"># Mengatur ukuran gambar agar lebih besar</span>
+
+<span class="c1"># Membuat scatter plot menggunakan Seaborn</span>
+<span class="c1"># &#39;hue&#39; akan secara otomatis mewarnai titik berdasarkan kolom &#39;Status&#39;</span>
+<span class="c1"># &#39;palette&#39; mengatur warna yang akan digunakan</span>
+<span class="c1"># &#39;style&#39; memberikan bentuk yang berbeda untuk setiap status</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_tsne</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x_tsne&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y_tsne&#39;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Status&#39;</span><span class="p">,</span>
+    <span class="n">style</span><span class="o">=</span><span class="s1">&#39;Status&#39;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Normal&#39;</span><span class="p">:</span> <span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="s1">&#39;Outlier (Terdeteksi)&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">},</span>
+    <span class="n">s</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="c1"># Ukuran titik</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span> <span class="c1"># Transparansi titik</span>
+<span class="p">)</span>
+
+<span class="c1"># Menambahkan judul dan label yang jelas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Visualisasi Outlier Menggunakan t-SNE&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Komponen t-SNE 1&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Komponen t-SNE 2&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Status Data&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span> <span class="c1"># Menampilkan legenda</span>
+
+<span class="c1"># Menambahkan teks penjelasan langsung di plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span>
+         <span class="s1">&#39;Titik-titik yang bergerombol adalah data normal.</span><span class="se">\n</span><span class="s1">Titik merah adalah data yang terdeteksi sebagai outlier</span><span class="se">\n</span><span class="s1">karena perilakunya berbeda dari mayoritas.&#39;</span><span class="p">,</span>
+         <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+         <span class="n">style</span><span class="o">=</span><span class="s1">&#39;italic&#39;</span><span class="p">,</span>
+         <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="c1"># Rata kanan</span>
+         <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="c1"># Rata bawah</span>
+         <span class="n">transform</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="c1"># Posisi relatif terhadap axes plot</span>
+         <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round,pad=0.5&#39;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;wheat&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># Menampilkan plot</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6f56c31da2980ca655a02826ed070ee47935e091cba6da95b415c6ffb663b7c9.png" src="_images/6f56c31da2980ca655a02826ed070ee47935e091cba6da95b415c6ffb663b7c9.png" />
+</div>
+</div>
+</section>
+<section id="setup-environment-pycaret-untuk-clustering">
+<h2>Setup Environment PyCaret untuk Clustering<a class="headerlink" href="#setup-environment-pycaret-untuk-clustering" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pycaret.clustering</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Inisialisasi environment PyCaret untuk clustering</span>
+<span class="c1"># Ganti &#39;silent=True&#39; dengan &#39;verbose=False&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menyiapkan environment PyCaret untuk clustering...&quot;</span><span class="p">)</span>
+<span class="n">clustering_setup</span> <span class="o">=</span> <span class="n">setup</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">session_id</span><span class="o">=</span><span class="mi">456</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setup selesai.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Menyiapkan environment PyCaret untuk clustering...
+Setup selesai.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuat-model-clustering-k-means">
+<h2>Membuat Model Clustering K-Means<a class="headerlink" href="#membuat-model-clustering-k-means" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Membuat model K-Means dengan 4 cluster</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Membuat model K-Means...&quot;</span><span class="p">)</span>
+<span class="n">kmeans_model</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">(</span><span class="s1">&#39;kmeans&#39;</span><span class="p">,</span> <span class="n">num_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model K-Means berhasil dibuat:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">kmeans_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Membuat model K-Means...
+</pre></div>
+</div>
+<div class="output text_html"></div><div class="output text_html"><style type="text/css">
+</style>
+<table id="T_a75f0">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_a75f0_level0_col0" class="col_heading level0 col0" >Silhouette</th>
+      <th id="T_a75f0_level0_col1" class="col_heading level0 col1" >Calinski-Harabasz</th>
+      <th id="T_a75f0_level0_col2" class="col_heading level0 col2" >Davies-Bouldin</th>
+      <th id="T_a75f0_level0_col3" class="col_heading level0 col3" >Homogeneity</th>
+      <th id="T_a75f0_level0_col4" class="col_heading level0 col4" >Rand Index</th>
+      <th id="T_a75f0_level0_col5" class="col_heading level0 col5" >Completeness</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_a75f0_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_a75f0_row0_col0" class="data row0 col0" >0.5560</td>
+      <td id="T_a75f0_row0_col1" class="data row0 col1" >717.9069</td>
+      <td id="T_a75f0_row0_col2" class="data row0 col2" >0.5092</td>
+      <td id="T_a75f0_row0_col3" class="data row0 col3" >0</td>
+      <td id="T_a75f0_row0_col4" class="data row0 col4" >0</td>
+      <td id="T_a75f0_row0_col5" class="data row0 col5" >0</td>
+    </tr>
+  </tbody>
+</table>
+</div><div class="output text_html"></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model K-Means berhasil dibuat:
+KMeans(n_clusters=4, random_state=456)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="memberi-label-cluster-pada-data">
+<h2>Memberi Label Cluster pada Data<a class="headerlink" href="#memberi-label-cluster-pada-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menambahkan label cluster ke data asli</span>
+<span class="n">results_cluster</span> <span class="o">=</span> <span class="n">assign_model</span><span class="p">(</span><span class="n">kmeans_model</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data setelah diberi label cluster:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">results_cluster</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Menghitung jumlah anggota di setiap cluster</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah data per cluster:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results_cluster</span><span class="p">[</span><span class="s1">&#39;Cluster&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data setelah diberi label cluster:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>Class</th>
+      <th>sepal length</th>
+      <th>sepal width</th>
+      <th>petal length</th>
+      <th>petal width</th>
+      <th>Cluster</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Iris-setosa</td>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Cluster 3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Iris-setosa</td>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Cluster 3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Iris-setosa</td>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Cluster 3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Iris-setosa</td>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>Cluster 3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Iris-setosa</td>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Cluster 3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah data per cluster:
+Cluster
+Cluster 2    40
+Cluster 1    38
+Cluster 3    36
+Cluster 0    36
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualisasi-hasil-clustering">
+<h2>Visualisasi Hasil Clustering<a class="headerlink" href="#visualisasi-hasil-clustering" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualisasi 2D dari cluster yang terbentuk</span>
+<span class="c1"># Plot ini mengurangi dimensi data (biasanya dengan PCA) untuk menampilkannya dalam 2D</span>
+<span class="n">plot_model</span><span class="p">(</span><span class="n">kmeans_model</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="s1">&#39;cluster&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"></div></div>
+</div>
+</section>
+<section id="visualisasi-tambahan-untuk-evaluasi-cluster">
+<h2>Visualisasi Tambahan untuk Evaluasi Cluster<a class="headerlink" href="#visualisasi-tambahan-untuk-evaluasi-cluster" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot Elbow untuk membantu menentukan jumlah cluster terbaik</span>
+<span class="n">plot_model</span><span class="p">(</span><span class="n">kmeans_model</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="s1">&#39;elbow&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"></div><img alt="_images/b9fe0755ee8a59773b87540a401ce7eb20d8dc8457c352fcb0eb98e0e5e5c20a.png" src="_images/b9fe0755ee8a59773b87540a401ce7eb20d8dc8457c352fcb0eb98e0e5e5c20a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot Silhouette untuk melihat seberapa baik setiap titik data cocok dalam clusternya</span>
+<span class="n">plot_model</span><span class="p">(</span><span class="n">kmeans_model</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="s1">&#39;silhouette&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"></div><img alt="_images/d53a677b6da9ab213b01767546472909f09308f26b2737d8f2b0552948208aff.png" src="_images/d53a677b6da9ab213b01767546472909f09308f26b2737d8f2b0552948208aff.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="EksplorasiData.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">tugas2</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="iris_data2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">ABOD</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library">1. Import Library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konfigurasi-koneksi-database">2. Konfigurasi Koneksi Database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instalasi-library-yang-dibutuhkan">Instalasi Library yang Dibutuhkan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-dan-koneksi-ke-database-postgresql">Import Library dan Koneksi ke Database PostgreSQL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-environment-pycaret-untuk-deteksi-anomali">Setup Environment PyCaret untuk Deteksi Anomali</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-deteksi-outlier-knn">Membuat Model Deteksi Outlier KNN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memberi-label-outlier-pada-data">Memberi Label Outlier pada Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-hasil-deteksi-outlier">Visualisasi Hasil Deteksi Outlier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-environment-pycaret-untuk-clustering">Setup Environment PyCaret untuk Clustering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-model-clustering-k-means">Membuat Model Clustering K-Means</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memberi-label-cluster-pada-data">Memberi Label Cluster pada Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-hasil-clustering">Visualisasi Hasil Clustering</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-tambahan-untuk-evaluasi-cluster">Visualisasi Tambahan untuk Evaluasi Cluster</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By David febrianto
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
